@@ -17,6 +17,7 @@ const config: Config = {
       colors: {
         primary: blue[700],
         secondary: violet[600],
+        secondaryHigh: violet[800],
       },
     },
   },
