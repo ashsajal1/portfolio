@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 export default function Footer() {
     return (
@@ -22,6 +22,9 @@ export default function Footer() {
                         </Link>
                         <Link href="https://x.com/ashsajal1" className=" hover:text-gray-400">
                             <FaTwitter />
+                        </Link>
+                        <Link href="https://instagram.com/ashsajal1" className=" hover:text-gray-400">
+                            <FaInstagram />
                         </Link>
                     </div>
                 </div>
