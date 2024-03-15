@@ -35,7 +35,7 @@ export default function Footer() {
                         <li><Link href="#" className=" hover:text-gray-400">Project 1</Link></li>
                         <li><Link href="#" className=" hover:text-gray-400">Project 2</Link></li>
                         <li><Link href="#" className="hover:text-gray-400">Project 3</Link></li>
-                        <li><Link href="projects" className="text-secondary text-sm">See more...</Link></li>
+                        <li><Link href="/projects" className="text-secondary text-sm">See more...</Link></li>
                     </ul>
                 </div>
             </div>
