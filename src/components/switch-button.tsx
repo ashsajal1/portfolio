@@ -24,7 +24,7 @@ const SwitchButton = () => {
         <div className={`w-12 h-6 flex items-center dark:bg-gray-300 rounded-full p-1 duration-300 ease-in-out bg-green-400`}>
           <div className={`bg-white w-5 h-5 rounded-full shadow-md transform duration-300 ease-in-out dark:translate-x-0  translate-x-5`}></div>
         </div>
-        <span className="ml-3 text-gray-700">Toggle</span>
+        <span className="ml-3 text-gray-700">{theme?.toUpperCase()}</span>
       </label>
     </div>
   );
