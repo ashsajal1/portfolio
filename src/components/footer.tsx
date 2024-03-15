@@ -1,7 +1,42 @@
-import React from 'react'
+import Link from 'next/link';
+import React from 'react';
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 export default function Footer() {
-  return (
-    <div>Footer</div>
-  )
+    return (
+        <footer className="bg-gradient-to-br from-primaryLow to-secondaryLow py-4 px-12 text-primary">
+            <div className="container w-full mx-auto flex flex-col md:flex-row items-start md:items-center justify-between">
+                <div className="mb-4 md:mb-0">
+                    <h3 className="text-lg font-bold mb-2">Contact</h3>
+                    <p>Email: example@example.com</p>
+                    <p>Phone: +1234567890</p>
+                </div>
+                <div className="mb-4 md:mb-0">
+                    <h3 className="text-lg font-bold mb-2">Social Media</h3>
+                    <div className="flex items-center space-x-4">
+                        <Link href="#" className="hover:text-gray-400">
+                            <FaGithub />
+                        </Link>
+                        <Link href="#" className="hover:text-gray-400">
+                            <FaLinkedin />
+                        </Link>
+                        <Link href="#" className=" hover:text-gray-400">
+                            <FaTwitter />
+                        </Link>
+                    </div>
+                </div>
+                <div>
+                    <h3 className="text-lg font-bold mb-2">Projects</h3>
+                    <ul>
+                        <li><Link href="#" className=" hover:text-gray-400">Project 1</Link></li>
+                        <li><Link href="#" className=" hover:text-gray-400">Project 2</Link></li>
+                        <li><Link href="#" className="hover:text-gray-400">Project 3</Link></li>
+                    </ul>
+                </div>
+            </div>
+            <div className="text-center mt-2">
+                <p>&copy; 2024 ashsajal. All rights reserved.</p>
+            </div>
+        </footer>
+    );
 }
