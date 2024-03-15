@@ -14,13 +14,13 @@ export default function Footer() {
                 <div className="mb-4 md:mb-0">
                     <h3 className="text-lg font-bold mb-2">Social Media</h3>
                     <div className="flex items-center space-x-4">
-                        <Link href="#" className="hover:text-gray-400">
+                        <Link href="https://github.com/ashsajal1" className="hover:text-gray-400">
                             <FaGithub />
                         </Link>
-                        <Link href="#" className="hover:text-gray-400">
+                        <Link href="https://linkedin.com/in/ashsajal" className="hover:text-gray-400">
                             <FaLinkedin />
                         </Link>
-                        <Link href="#" className=" hover:text-gray-400">
+                        <Link href="https://x.com/ashsajal1" className=" hover:text-gray-400">
                             <FaTwitter />
                         </Link>
                     </div>
