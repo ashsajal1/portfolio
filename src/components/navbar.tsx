@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { RiTwitterXLine, RiGithubFill  } from "react-icons/ri";
+import SwitchButton from "./switch-button";
 
 export default function Navbar() {
   return (
@@ -8,6 +9,8 @@ export default function Navbar() {
         <div className='flex items-center justify-between gap-2'>
             <Link target="_blink" href='https://x.com/ashsajal1'><RiTwitterXLine className="text-primary" /></Link>
             <Link target="_blink" href='https://github.com/ashsajal1'><RiGithubFill className="text-primary h-5 w-5" /></Link>
+
+            <SwitchButton />
         </div>
     </nav>
   )
