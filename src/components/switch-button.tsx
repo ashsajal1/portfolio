@@ -21,10 +21,10 @@ const SwitchButton = () => {
         htmlFor="toggle"
         className="flex items-center cursor-pointer"
       >
-        <div className={`w-12 h-6 flex items-center bg-gray-300 rounded-full p-1 duration-300 ease-in-out dark:bg-green-400`}>
-          <div className={`bg-white w-5 h-5 rounded-full shadow-md transform duration-300 ease-in-out translate-x-0  dark:translate-x-5`}></div>
+        <div className={`w-12 h-6 flex items-center bg-gray-50 rounded-full p-1 duration-300 ease-in-out dark:bg-green-400`}>
+          <div className={`dark:bg-white bg-green-500 w-5 h-5 rounded-full shadow-md transform duration-300 ease-in-out translate-x-0  dark:translate-x-5`}></div>
         </div>
-        <span className="ml-3 text-gray-700">{theme?.toUpperCase()}</span>
+        {/* <span className="ml-3 text-gray-700">{theme?.toUpperCase()}</span> */}
       </label>
     </div>
   );
