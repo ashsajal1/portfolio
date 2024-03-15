@@ -8,8 +8,8 @@ export default function Footer() {
             <div className="container w-full mx-auto flex flex-col md:flex-row items-start md:items-center justify-between">
                 <div className="mb-4 md:mb-0">
                     <h3 className="text-lg font-bold mb-2">Contact</h3>
-                    <p>Email: example@example.com</p>
-                    <p>Phone: +1234567890</p>
+                    <p>Email: ashsajal@yahoo.com</p>
+                    <p>Phone: +8801608478333</p>
                 </div>
                 <div className="mb-4 md:mb-0">
                     <h3 className="text-lg font-bold mb-2">Social Media</h3>
