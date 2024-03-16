@@ -17,7 +17,7 @@ export default function Project({ url, image, title, description, repo }: { url:
                 <p className="text-sm">{description}</p>
             </div>
 
-            <div className="flex items-center justify-between gap-2 w-full">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-2 w-full">
                 <Link className="w-full" href={url} target="_blink">
                     <button className="p-2 bg-primary text-sm text-slate-50 rounded hover:bg-primaryLow w-full">Preview</button>
                 </Link>
