@@ -2,6 +2,7 @@ import React from 'react'
 import Button from './button'
 import { CiPhone, CiWavePulse1 } from "react-icons/ci";
 import Blob from './blob';
+import Image from 'next/image'
 
 export default function HeroSection() {
     return (
@@ -16,8 +17,10 @@ export default function HeroSection() {
                 </div>
             </div>
 
-            <div className='w-9/12 order-1 sm:order-2'>
-                <p>Some pircture of work</p>
+            <div className='order-1 sm:order-2'>
+                <div className=''>
+                    <Image width={400} height={200} src='/webapp/webapp.png' alt='Web app screenshot' />
+                </div>
             </div>
             <Blob />
         </div>
