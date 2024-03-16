@@ -6,7 +6,7 @@ import { RiTwitterXLine } from "react-icons/ri";
 export default function Footer() {
     return (
         <footer className="bg-gradient-to-br from-primaryLow to-secondaryLow py-4 px-12 text-primary">
-            <div className="container w-full mx-auto flex flex-col md:flex-row items-start md:items-center justify-between">
+            <div className="container w-full mx-auto flex flex-col md:flex-row items-start  justify-between">
                 <div className="mb-4 md:mb-0">
                     <h3 className="text-lg font-bold mb-2">Contact</h3>
                     <p>Email: ashsajal@yahoo.com</p>
