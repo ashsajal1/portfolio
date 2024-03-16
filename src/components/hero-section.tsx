@@ -3,6 +3,7 @@ import Button from './button'
 import { CiPhone, CiWavePulse1 } from "react-icons/ci";
 import Blob from './blob';
 import Image from 'next/image'
+import Link from 'next/link';
 
 export default function HeroSection() {
     return (
@@ -13,7 +14,9 @@ export default function HeroSection() {
 
                 <div className='flex items-center gap-2 mt-6'>
                     <Button label='Contact' icon={<CiPhone />}></Button>
-                    <Button label='Explore Projects' icon={<CiWavePulse1 />} />
+                    <Link href='/projects'>
+                        <Button label='Explore Projects' icon={<CiWavePulse1 />} />
+                    </Link>
                 </div>
             </div>
 
