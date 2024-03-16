@@ -1,19 +1,19 @@
 import Image from "next/image";
 
-export default function Project() {
+export default function Project({ url, image, title, description, repo }: { url: string, image: string, title: string, description: string, repo:string }) {
     return (
         <div className="m-auto border flex flex-col items-center w-full gap-2 p-2">
             <div className="h-[280px] w-full relative">
                 <Image
-                    src="/webapp/reactjs-nextjs-gig-image-1.png"
+                    src={image}
                     alt="project image"
-                    fill={true} 
+                    fill={true}
                 />
             </div>
 
             <div>
-                <h3 className="text-lg font-bold">AI Image Classification</h3>
-                <p className="text-sm">AI Image Classification</p>
+                <h3 className="text-lg font-bold">{title}</h3>
+                <p className="text-sm">{description}</p>
             </div>
 
             <div className="flex items-center justify-between gap-2 w-full">
