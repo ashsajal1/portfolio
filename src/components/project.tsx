@@ -1,6 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 
-export default function Project({ url, image, title, description, repo }: { url: string, image: string, title: string, description: string, repo:string }) {
+export default function Project({ url, image, title, description, repo }: { url: string, image: string, title: string, description: string, repo: string }) {
     return (
         <div className="m-auto border flex flex-col items-center w-full gap-2 p-2">
             <div className="h-[280px] w-full relative">
@@ -17,8 +18,13 @@ export default function Project({ url, image, title, description, repo }: { url:
             </div>
 
             <div className="flex items-center justify-between gap-2 w-full">
-                <button className="p-2 bg-primary text-sm text-slate-50 rounded hover:bg-primaryLow w-full">Preview</button>
-                <button className="p-2 border border-primary text-sm text-primary hover:bg-primaryLow rounded  w-full">Preview</button>
+                <Link className="w-full" href={url} target="_blink">
+                    <button className="p-2 bg-primary text-sm text-slate-50 rounded hover:bg-primaryLow w-full">Preview</button>
+                </Link>
+                <Link className="w-full" href={repo} target="_blink">
+                    <button className="p-2 border border-primary text-sm text-primary hover:bg-primaryLow rounded  w-full">Github repo</button>
+                </Link>
+
             </div>
         </div>
     )

@@ -14,7 +14,7 @@ export default function HeroSection() {
 
                 <div className='flex items-center gap-2 mt-6'>
                     <Link href='mailto:ashsajal@yahoo.com'>
-                    <Button label='Contact' icon={<CiPhone />}></Button>
+                        <Button label='Contact' icon={<CiPhone />}></Button>
                     </Link>
                     <Link href='/projects'>
                         <Button label='Explore Projects' icon={<CiWavePulse1 />} />
