@@ -13,7 +13,9 @@ export default function HeroSection() {
                 <p className='py-2 text-center sm:text-start'>Exploring Advanced Technologies to Enhance and Simplify Everyday Life</p>
 
                 <div className='flex items-center gap-2 mt-6'>
+                    <Link href='mailto:ashsajal@yahoo.com'>
                     <Button label='Contact' icon={<CiPhone />}></Button>
+                    </Link>
                     <Link href='/projects'>
                         <Button label='Explore Projects' icon={<CiWavePulse1 />} />
                     </Link>
