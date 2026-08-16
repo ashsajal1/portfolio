@@ -1,32 +1,35 @@
 'use client'
+import { useEffect, useState } from "react"
 import { useTheme } from "next-themes"
+import { FiSun, FiMoon } from "react-icons/fi"
 
 const SwitchButton = () => {
-  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  const { resolvedTheme, setTheme } = useTheme();
 
-  const handleToggle = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
-  };
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted) {
+    return <div className="w-12 h-6 rounded-full bg-primaryLow dark:bg-slate-700" aria-hidden />;
+  }
+
+  const isDark = resolvedTheme === 'dark';
 
   return (
-    <div className="flex items-center">
-      <input
-        type="checkbox"
-        id="toggle"
-        className="hidden"
-        checked={theme === 'dark'}
-        onChange={handleToggle}
-      />
-      <label
-        htmlFor="toggle"
-        className="flex items-center cursor-pointer"
+    <button
+      type="button"
+      role="switch"
+      aria-checked={isDark}
+      aria-label="Toggle dark mode"
+      onClick={() => setTheme(isDark ? 'light' : 'dark')}
+      className="relative flex items-center w-12 h-6 rounded-full bg-primaryLow dark:bg-slate-700 transition-colors duration-300 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary"
+    >
+      <span
+        className={`flex items-center justify-center w-5 h-5 rounded-full bg-gradient-to-br from-primary to-secondary text-slate-50 shadow-md transform transition-transform duration-300 ${isDark ? 'translate-x-6' : 'translate-x-1'}`}
       >
-        <div className={`w-12 h-6 flex items-center bg-gray-50 rounded-full p-1 duration-300 ease-in-out dark:bg-green-400`}>
-          <div className={`dark:bg-white bg-green-500 w-5 h-5 rounded-full shadow-md transform duration-300 ease-in-out translate-x-0  dark:translate-x-5`}></div>
-        </div>
-        {/* <span className="ml-3 text-gray-700">{theme?.toUpperCase()}</span> */}
-      </label>
-    </div>
+        {isDark ? <FiMoon className="h-3 w-3" /> : <FiSun className="h-3 w-3" />}
+      </span>
+    </button>
   );
 };
 
