@@ -2,6 +2,9 @@ import React from 'react'
 
 export default function Blob() {
   return (
-    <div className='h-[100px] w-[100px] top-24 left-12 -z-12 inset-0 absolute bg-gradient-to-br from-primary to-secondary filter blur-2xl mix-blend-multiply rounded-full opacity-70'></div>
+    <div className='pointer-events-none absolute -z-10 inset-0 overflow-hidden'>
+      <div className='absolute -top-20 -left-20 h-[300px] w-[300px] rounded-full bg-gradient-to-br from-primary to-secondary opacity-30 blur-3xl animate-pulse' />
+      <div className='absolute -bottom-24 -right-16 h-[260px] w-[260px] rounded-full bg-gradient-to-br from-secondary to-primary opacity-25 blur-3xl animate-pulse' />
+    </div>
   )
 }

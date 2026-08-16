@@ -18,7 +18,7 @@ export const projects = [
   {
     title: "Phowwcase : Showcase projects",
     url: "https://phowwcase.vercel.app",
-    repo: "https://github.com/ashsajal1/ai-qna",
+    repo: "https://github.com/ashsajal1/phowwcase",
     image: "/webapp/reactjs-nextjs-gig-image-3.png",
     description:
       "Presenting a sophisticated web application designed to showcase developers' most favored projects, complete with GitHub repository links and previews. This innovative platform offers a seamless user experience, allowing visitors to explore developers' noteworthy projects and preview their functionalities directly from the interface. With its integration of GitHub repositories and project previews, this web app serves as a valuable tool for developers seeking inspiration and collaboration opportunities.",
