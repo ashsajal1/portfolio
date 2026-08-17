@@ -56,7 +56,7 @@ export default function HeroSection() {
                     </div>
                 </div>
 
-                <div className='order-1 sm:order-2 flex items-center flex-col justify-center w-full sm:w-1/2'>
+                <div className='hidden order-1 sm:order-2 sm:flex items-center flex-col justify-center w-full sm:w-1/2'>
                     <div className='relative w-full max-w-[420px] rounded-2xl border border-primary/20 shadow-2xl shadow-primary/20 overflow-hidden animate-float'>
                         <Image
                             width={400}
