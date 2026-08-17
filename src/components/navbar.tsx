@@ -3,13 +3,14 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { RiTwitterXLine, RiGithubFill } from "react-icons/ri";
-import { FiHome, FiFolder, FiSend } from "react-icons/fi";
+import { FiHome, FiFolder, FiSend, FiFileText } from "react-icons/fi";
 import SwitchButton from "./switch-button";
 import Button from "./button";
 
 const navLinks = [
   { href: "/", label: "Home", icon: <FiHome /> },
   { href: "/projects", label: "Projects", icon: <FiFolder /> },
+  { href: "/blog", label: "Blog", icon: <FiFileText /> },
 ];
 
 export default function Navbar() {
