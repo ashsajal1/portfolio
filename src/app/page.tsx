@@ -1,5 +1,6 @@
 import HeroSection from "@/components/hero-section";
 import ServicesSection from "@/components/services-section";
+import BlogPreviewSection from "@/components/blog-preview-section";
 import CTASection from "@/components/cta-section";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     <main className="flex flex-col">
       <HeroSection />
       <ServicesSection />
+      <BlogPreviewSection />
       <CTASection />
     </main>
   );
