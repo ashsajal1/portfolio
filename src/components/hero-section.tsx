@@ -38,7 +38,7 @@ export default function HeroSection() {
                     </p>
 
                     <div className='flex items-center gap-2 mt-6 flex-wrap justify-center sm:justify-start'>
-                        <Link href='mailto:ashsajal@yahoo.com'>
+                        <Link href='https://cal.com/ashsajal' target='_blank' rel='noopener noreferrer'>
                             <Button label='Book a Free Consultation' icon={<CiPhone />}></Button>
                         </Link>
                         <Link href='/projects'>
