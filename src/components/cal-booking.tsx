@@ -11,18 +11,17 @@ export default function CalBooking() {
   useEffect(() => {
     if (window.Cal) return;
 
-    const script = document.createElement("script");
-    script.src = "https://cal.com/embed/embed.js";
-    script.async = true;
-    document.body.appendChild(script);
+    const bootstrap = `(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ar); } else { p(cal, ar); } return; } p(cal, ar); }; })(window, "https://cal.com/embed/embed.js", "init");`;
 
-    script.onload = () => {
-      window.Cal("init", { origin: "https://cal.com" });
-      window.Cal("inline", {
-        elementOrSelector: "#my-cal-inline",
-        calLink: "ashsajal",
-      });
-    };
+    const script = document.createElement("script");
+    script.innerHTML = bootstrap;
+    document.head.appendChild(script);
+
+    window.Cal("init", { origin: "https://cal.com" });
+    window.Cal("inline", {
+      elementOrSelector: "#my-cal-inline",
+      calLink: "ashsajal",
+    });
 
     return () => {
       if (script.parentNode) script.parentNode.removeChild(script);
