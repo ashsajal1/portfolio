@@ -39,4 +39,40 @@ export const projects = [
     description:
       "This web application is built using Next.js and TypeScript. It leverages the Huggingface API for text generation. Users can input prompts, and the app generates creative and contextually relevant text based on the provided input.",
   },
+  {
+    title: "Typing App",
+    repo: "https://github.com/ashsajal1/typing-app",
+    description:
+      "The Typing Practice App is a web application built with React.js that allows users to practice and improve their typing skills with a simple and intuitive interface.",
+  },
+  {
+    title: "Next SaaS Template",
+    repo: "https://github.com/ashsajal1/next-saas-template",
+    description:
+      "A comprehensive starter kit for building scalable SaaS applications with Next.js, featuring built-in authentication, database integration, and responsive design.",
+  },
+  {
+    title: "Mini Course",
+    repo: "https://github.com/ashsajal1/mini-course",
+    description:
+      "Empowering learners with quality education and practical skills for the modern world. Built with Next.js and PostgreSQL.",
+  },
+  {
+    title: "Sohojboi",
+    repo: "https://github.com/ashsajal1/sohojboi",
+    description:
+      "An interactive platform to ask and answer questions, participate in quizzes, and access educational content through a blog.",
+  },
+  {
+    title: "JS Practice App",
+    repo: "https://github.com/ashsajal1/js-practice-app",
+    description:
+      "An app to practice programming related topics and concepts — JavaScript, Rust, Golang, React and more.",
+  },
+  {
+    title: "Calorie Tracker",
+    repo: "https://github.com/ashsajal1/calorie-tracker",
+    description:
+      "A sleek and responsive calorie tracker app built with Vue.js 3, TypeScript, and Tailwind CSS. Log meals, track daily intake, and monitor fitness goals in real time.",
+  },
 ];

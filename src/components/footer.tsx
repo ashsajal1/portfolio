@@ -69,10 +69,10 @@ export default function Footer() {
                 <div>
                     <h3 className="text-lg font-bold mb-4 gradient-text">Projects</h3>
                     <ul className="space-y-2.5 text-sm">
-                        {projects.slice(0, 3).map(({ title, url }) => (
-                            <li key={url}>
+                        {projects.slice(0, 3).map(({ title, url, repo }) => (
+                            <li key={repo}>
                                 <Link
-                                    href={url}
+                                    href={url ?? repo}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center gap-2 transition-all duration-200 hover:text-primary dark:hover:text-secondary hover:translate-x-1"
