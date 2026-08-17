@@ -1,6 +1,7 @@
 'use client'
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import { RiTwitterXLine, RiGithubFill } from "react-icons/ri";
 import { FiHome, FiFolder, FiSend } from "react-icons/fi";
 import SwitchButton from "./switch-button";
@@ -13,9 +14,17 @@ const navLinks = [
 
 export default function Navbar() {
   const pathname = usePathname();
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <nav className="sticky top-0 z-50 flex items-center justify-between bg-white/80 dark:bg-slate-900/80 backdrop-blur-md px-4 sm:px-12 py-2 h-[60px] border-b border-secondaryLow/50 dark:border-secondaryLow/20">
+    <nav className={`sticky top-0 z-50 flex items-center justify-between px-4 sm:px-12 py-2 h-[60px] transition-all duration-300 ${scrolled ? "bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-md shadow-primary/5" : "bg-transparent"}`}>
       <Link href="/" className="text-2xl font-bold gradient-text">
         Sajal
       </Link>
