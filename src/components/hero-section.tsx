@@ -42,7 +42,7 @@ export default function HeroSection() {
                             <Button label='Book a Free Consultation' icon={<CiPhone />}></Button>
                         </Link>
                         <Link href='/projects'>
-                            <Button label='View My Work' icon={<FiCheckCircle />} className='bg-transparent border border-primary text-primary hover:bg-primary hover:text-slate-50' />
+                            <Button label='View My Work' icon={<FiCheckCircle />} variant='outline' />
                         </Link>
                     </div>
 

@@ -23,7 +23,7 @@ export default function CTASection() {
                             <Button
                                 label="Start a Conversation"
                                 icon={<FiSend />}
-                                className="bg-none bg-slate-50 text-primary hover:bg-white hover:to-transparent"
+                                variant="light"
                             />
                         </Link>
                     </div>
