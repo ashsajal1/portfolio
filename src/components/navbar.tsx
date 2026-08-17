@@ -87,8 +87,8 @@ export default function Navbar() {
 
             <SwitchButton />
 
-            <Link href="mailto:ashsajal@yahoo.com" className="hidden sm:block">
-              <Button label="Hire Me" icon={<FiSend />} className="px-4 py-1.5 text-sm" />
+            <Link href="mailto:ashsajal@yahoo.com" className="block">
+              <Button label="Hire Me" icon={<FiSend />} className="px-2.5 sm:px-4 py-1.5 text-sm" />
             </Link>
 
             <button
@@ -124,30 +124,24 @@ export default function Navbar() {
             );
           })}
 
-          <div className="flex items-center justify-between pt-3 mt-2 border-t border-secondaryLow/40 dark:border-secondaryLow/20">
-            <div className="flex items-center gap-3">
-              <Link
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://x.com/ashsajal1"
-                className="text-slate-500 dark:text-slate-400 transition-all duration-200 hover:text-primary dark:hover:text-secondary hover:scale-110"
-                aria-label="X (Twitter) profile"
-              >
-                <RiTwitterXLine className="h-5 w-5" />
-              </Link>
-              <Link
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://github.com/ashsajal1"
-                className="text-slate-500 dark:text-slate-400 transition-all duration-200 hover:text-primary dark:hover:text-secondary hover:scale-110"
-                aria-label="GitHub profile"
-              >
-                <RiGithubFill className="h-5 w-5" />
-              </Link>
-            </div>
-
-            <Link href="mailto:ashsajal@yahoo.com">
-              <Button label="Hire Me" icon={<FiSend />} className="px-4 py-1.5 text-sm" />
+          <div className="flex items-center gap-3 pt-3 mt-2 border-t border-secondaryLow/40 dark:border-secondaryLow/20">
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://x.com/ashsajal1"
+              className="text-slate-500 dark:text-slate-400 transition-all duration-200 hover:text-primary dark:hover:text-secondary hover:scale-110"
+              aria-label="X (Twitter) profile"
+            >
+              <RiTwitterXLine className="h-5 w-5" />
+            </Link>
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/ashsajal1"
+              className="text-slate-500 dark:text-slate-400 transition-all duration-200 hover:text-primary dark:hover:text-secondary hover:scale-110"
+              aria-label="GitHub profile"
+            >
+              <RiGithubFill className="h-5 w-5" />
             </Link>
           </div>
         </div>
