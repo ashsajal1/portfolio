@@ -8,8 +8,37 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Urbanist({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Portfolio : Project list of Ashfiquzzaman Sajal.",
-  description: "Ashfiquzzaman Sajal is a seasoned web developer renowned for his unparalleled mastery of the JavaScript/TypeScript ecosystem, particularly in React.js and Next.js, alongside Django and Laravel. His GitHub repository is a treasure trove of meticulously crafted micro projects, showcasing robust and scalable solutions in web development. Sajal's expertise extends to modern CSS methodologies, seamlessly integrating Tailwind CSS and SCSS into his projects to deliver visually stunning and responsive user interfaces. With an unwavering commitment to excellence and a passion for innovation, Sajal continually pushes the boundaries of web development, leaving an indelible mark on the digital landscape with every creation. Explore his portfolio to witness firsthand the fusion of creativity and technical brilliance.",
+  metadataBase: new URL("https://ashsajal.vercel.app"),
+  title: {
+    default: "Ashfiquzzaman Sajal — Full-Stack Developer Portfolio",
+    template: "%s | Ashfiquzzaman Sajal",
+  },
+  description:
+    "Ashfiquzzaman Sajal is a full-stack developer building modern, AI-powered web experiences with React, Next.js, TypeScript, and Node.js. Explore projects, blog insights, and services.",
+  keywords: [
+    "Ashfiquzzaman Sajal",
+    "Full-Stack Developer",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Web Developer",
+    "Portfolio",
+  ],
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://ashsajal.vercel.app",
+    siteName: "Ashfiquzzaman Sajal Portfolio",
+    title: "Ashfiquzzaman Sajal — Full-Stack Developer Portfolio",
+    description:
+      "Modern, AI-powered web experiences built with React, Next.js, and TypeScript.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ashfiquzzaman Sajal — Full-Stack Developer Portfolio",
+    description:
+      "Modern, AI-powered web experiences built with React, Next.js, and TypeScript.",
+  },
 };
 
 export default function RootLayout({
