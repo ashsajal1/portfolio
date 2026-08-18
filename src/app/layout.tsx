@@ -8,7 +8,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Urbanist({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ashsajal.vercel.app"),
+  metadataBase: new URL("https://ashsajal.netlify.app"),
   title: {
     default: "Ashfiquzzaman Sajal — Full-Stack Developer Portfolio",
     template: "%s | Ashfiquzzaman Sajal",
