@@ -1,5 +1,5 @@
 import React from "react";
-import { FiBriefcase, FiGraduationCap } from "react-icons/fi";
+import { FiBriefcase, FiBook } from "react-icons/fi";
 
 const experiences = [
   {
@@ -53,7 +53,7 @@ export default function ExperienceSection() {
                 <span className="hidden sm:block" />
                 <div className="absolute left-4 sm:left-1/2 sm:-translate-x-1/2 -translate-y-0 h-8 w-8 rounded-full bg-gradient-to-br from-primary to-secondary text-slate-50 flex items-center justify-center shadow-lg shadow-primary/20">
                   {type === "education" ? (
-                    <FiGraduationCap className="h-4 w-4" />
+                    <FiBook className="h-4 w-4" />
                   ) : (
                     <FiBriefcase className="h-4 w-4" />
                   )}

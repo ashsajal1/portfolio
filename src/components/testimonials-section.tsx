@@ -1,6 +1,6 @@
 import React from "react";
 import { FaStar } from "react-icons/fa6";
-import { FiQuote } from "react-icons/fi";
+import { FiMessageSquare } from "react-icons/fi";
 
 const testimonials = [
   {
@@ -45,7 +45,7 @@ export default function TestimonialsSection() {
               key={name}
               className="group relative flex flex-col rounded-2xl border border-secondaryLow/50 dark:border-secondaryLow/20 bg-white/50 dark:bg-slate-900/50 p-6 shadow-sm hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1 transition-all duration-300"
             >
-              <FiQuote className="text-3xl text-primary/30 dark:text-secondary/30 mb-3" />
+              <FiMessageSquare className="text-3xl text-primary/30 dark:text-secondary/30 mb-3" />
               <div className="flex gap-0.5 mb-3 text-secondary dark:text-secondaryLow">
                 {Array.from({ length: 5 }).map((_, i) => (
                   <FaStar key={i} className="h-4 w-4" />
