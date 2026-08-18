@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import { RiTwitterXLine, RiArrowUpLine } from "react-icons/ri";
-import { FiMail, FiPhone, FiHome, FiFolder, FiSend } from "react-icons/fi";
+import { FiMail, FiPhone, FiHome, FiFolder, FiSend, FiDownload } from "react-icons/fi";
 import { projects } from '@/lib/projectsList';
 
 const socialLinks = [
@@ -15,6 +15,7 @@ const socialLinks = [
 const quickLinks = [
   { href: "/", label: "Home", icon: <FiHome /> },
   { href: "/projects", label: "Projects", icon: <FiFolder /> },
+  { href: "/resume.pdf", label: "Resume", icon: <FiDownload />, download: true },
   { href: "mailto:ashsajal@yahoo.com", label: "Hire Me", icon: <FiSend /> },
 ];
 
@@ -52,10 +53,11 @@ export default function Footer() {
                 <div>
                     <h3 className="text-lg font-bold mb-4 gradient-text">Quick Links</h3>
                     <ul className="space-y-2.5 text-sm">
-                        {quickLinks.map(({ href, label, icon }) => (
+                        {quickLinks.map(({ href, label, icon, download }) => (
                             <li key={href}>
                                 <Link
                                     href={href}
+                                    {...(download ? { download: true } : {})}
                                     className="inline-flex items-center gap-2 transition-all duration-200 hover:text-primary dark:hover:text-secondary hover:translate-x-1"
                                 >
                                     <span className="text-secondary dark:text-secondaryLow">{icon}</span>
