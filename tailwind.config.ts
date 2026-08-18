@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-import { violet, blue } from "tailwindcss/colors";
+import { violet, blue, green } from "tailwindcss/colors";
 
 const config: Config = {
   darkMode: 'class',
@@ -16,11 +16,11 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        primaryLow: blue[200],
-        primary: blue[700],
-        secondary: violet[600],
-        secondaryLow: violet[200],
-        secondaryHigh: violet[800],
+        primaryLow: green[200],
+        primary: green[700],
+        secondary: blue[500],
+        secondaryLow: blue[200],
+        secondaryHigh: blue[800],
       },
       keyframes: {
         float: {
