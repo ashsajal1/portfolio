@@ -61,7 +61,7 @@ export default function HeroSection() {
                         <Image
                             width={400}
                             height={200}
-                            src='/webapp/webapp.png'
+                            src='/webapp.png'
                             alt='Web app screenshot'
                             className='object-cover w-full h-auto'
                             priority
