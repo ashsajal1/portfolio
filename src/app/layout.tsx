@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://ashsajal.vercel.app",
+    url: "https://ashsajal.netlify.app",
     siteName: "Ashfiquzzaman Sajal Portfolio",
     title: "Ashfiquzzaman Sajal — Full-Stack Developer Portfolio",
     description:
