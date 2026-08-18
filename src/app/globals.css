@@ -33,3 +33,7 @@
     @apply bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent;
   }
 }
+
+.bprogress .bar {
+  background: linear-gradient(to right, #15803d, #3b82f6) !important;
+}
