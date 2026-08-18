@@ -18,14 +18,6 @@ const experiences = [
     description:
       "Shipped responsive interfaces with React and Next.js, focused on performance and clean, reusable component systems.",
   },
-  {
-    type: "education",
-    period: "2016 — 2020",
-    title: "B.Sc. in Computer Science & Engineering",
-    org: "University",
-    description:
-      "Built a strong foundation in algorithms, data structures, databases, and software engineering principles.",
-  },
 ];
 
 export default function ExperienceSection() {
