@@ -1,5 +1,5 @@
-import Project from "@/components/project";
 import { projects } from "@/lib/projectsList";
+import ProjectsList from "@/components/projects-list";
 
 export default function Projects() {
   return (
@@ -14,12 +14,7 @@ export default function Projects() {
         <div className="mt-4 mx-auto h-1 w-24 rounded-full bg-gradient-to-r from-primary to-secondary" />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
-        {projects.map(({title, description, repo, url, image}) => (
-          <Project key={repo} title={title} description={description} repo={repo} url={url} image={image} />
-        ))}
-
-      </div>
+      <ProjectsList projects={projects} />
     </div>
   )
 }
