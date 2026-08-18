@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { FiAward, FiBriefcase, FiCode, FiCoffee } from "react-icons/fi";
 
 const highlights = [
@@ -16,8 +17,15 @@ export default function AboutSection() {
           <div className="order-1 flex justify-center">
             <div className="relative">
               <div className="absolute -inset-3 rounded-3xl bg-gradient-to-br from-primary to-secondary opacity-20 blur-xl" />
-              <div className="relative flex items-center justify-center h-56 w-56 rounded-3xl bg-gradient-to-br from-primary to-secondary text-slate-50 text-7xl font-extrabold shadow-xl shadow-primary/20">
-                AS
+              <div className="relative h-56 w-56 rounded-3xl overflow-hidden shadow-xl shadow-primary/20">
+                <Image
+                  src="/profile.png"
+                  alt="Ashfiquzzaman Sajal"
+                  fill
+                  sizes="224px"
+                  className="object-cover"
+                  priority
+                />
                 <span className="absolute bottom-3 right-3 h-4 w-4 rounded-full bg-green-500 ring-4 ring-white dark:ring-slate-900" />
               </div>
             </div>
