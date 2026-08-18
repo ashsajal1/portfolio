@@ -1,9 +1,10 @@
 import Link from 'next/link';
 import React from 'react';
 import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
-import { RiTwitterXLine, RiArrowUpLine } from "react-icons/ri";
+import { RiTwitterXLine } from "react-icons/ri";
 import { FiMail, FiPhone, FiHome, FiFolder, FiSend, FiDownload } from "react-icons/fi";
 import { projects } from '@/lib/projectsList';
+import BackToTop from './back-to-top';
 
 const socialLinks = [
   { href: "https://github.com/ashsajal1", label: "GitHub", icon: <FaGithub /> },
@@ -130,13 +131,7 @@ export default function Footer() {
                 <p className="inline-flex items-center gap-1">
                     Built with <span className="text-secondary dark:text-secondaryLow">&#10084;</span> using Next.js
                 </p>
-                <Link
-                    href="#"
-                    aria-label="Back to top"
-                    className="inline-flex items-center gap-1.5 text-primary dark:text-secondary transition-all duration-200 hover:gap-2.5"
-                >
-                    Back to top <RiArrowUpLine />
-                </Link>
+                <BackToTop />
             </div>
         </footer>
     );
