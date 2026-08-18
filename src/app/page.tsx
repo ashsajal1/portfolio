@@ -3,6 +3,7 @@ import AboutSection from "@/components/about-section";
 import ServicesSection from "@/components/services-section";
 import TechStackSection from "@/components/tech-stack-section";
 import BlogPreviewSection from "@/components/blog-preview-section";
+import TestimonialsSection from "@/components/testimonials-section";
 import CalBooking from "@/components/cal-booking";
 import CTASection from "@/components/cta-section";
 
@@ -14,6 +15,7 @@ export default function Home() {
       <ServicesSection />
       <TechStackSection />
       <BlogPreviewSection />
+      <TestimonialsSection />
       <CalBooking />
       <CTASection />
     </main>
