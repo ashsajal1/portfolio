@@ -3,9 +3,9 @@ import React, { ReactNode } from 'react'
 type Variant = 'primary' | 'outline' | 'light';
 
 const variants: Record<Variant, string> = {
-    primary: 'bg-gradient-to-br from-primary to-secondary text-slate-50 hover:to-secondaryHigh',
-    outline: 'bg-transparent border border-primary text-primary hover:bg-primary hover:text-slate-50',
-    light: 'bg-slate-50 text-primary hover:bg-white',
+    primary: 'bg-gradient-to-br from-primary to-secondary text-slate-50 dark:text-slate-900 hover:to-secondaryHigh',
+    outline: 'bg-transparent border border-primary text-primary hover:bg-primary hover:text-slate-50 dark:hover:text-slate-900',
+    light: 'bg-slate-50 text-primary hover:bg-white dark:bg-slate-900 dark:text-white dark:hover:bg-slate-800',
 };
 
 export default function Button({ label, icon, onClick, className, variant = 'primary' }: { label: string, icon?: ReactNode, onClick?: () => void, className?: string, variant?: Variant }) {

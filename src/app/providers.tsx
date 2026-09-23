@@ -17,7 +17,7 @@ export default function Providers({
     >
       <ProgressProvider
         height="3px"
-        color="#15803d"
+        color="#16A34A"
         options={{ showSpinner: false }}
         shallowRouting
       >

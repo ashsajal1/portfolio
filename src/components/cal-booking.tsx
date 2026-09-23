@@ -73,7 +73,7 @@ export default function CalBooking() {
           <button
             type="button"
             onClick={openCal}
-            className="mt-5 inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-md text-sm font-medium bg-gradient-to-br from-primary to-secondary text-slate-50 hover:to-secondaryHigh transition-all duration-200 hover:scale-105 active:scale-95 cursor-pointer"
+            className="mt-5 inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-md text-sm font-medium bg-gradient-to-br from-primary to-secondary text-slate-50 dark:text-slate-900 hover:to-secondaryHigh transition-all duration-200 hover:scale-105 active:scale-95 cursor-pointer"
           >
             Open booking calendar
           </button>

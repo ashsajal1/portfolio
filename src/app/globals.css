@@ -3,6 +3,22 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --color-primary-low: 216 251 229;
+    --color-primary: 22 163 74;
+    --color-secondary: 13 148 136;
+    --color-secondary-low: 215 250 245;
+    --color-secondary-high: 15 118 110;
+  }
+
+  :root.dark {
+    --color-primary-low: 216 251 229;
+    --color-primary: 58 237 125;
+    --color-secondary: 56 232 207;
+    --color-secondary-low: 215 250 245;
+    --color-secondary-high: 34 139 124;
+  }
+
   html {
     scroll-behavior: smooth;
   }
@@ -12,7 +28,7 @@
   }
 
   ::selection {
-    @apply bg-primary text-slate-50;
+    @apply bg-primary text-slate-50 dark:text-slate-900;
   }
 
   ::-webkit-scrollbar {
@@ -35,5 +51,5 @@
 }
 
 .bprogress .bar {
-  background: linear-gradient(to right, #15803d, #3b82f6) !important;
+  background: linear-gradient(to right, rgb(var(--color-primary)), rgb(var(--color-secondary))) !important;
 }

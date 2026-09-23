@@ -24,7 +24,7 @@ export default function Footer() {
     const year = new Date().getFullYear();
 
     return (
-        <footer className="relative bg-gradient-to-br from-primaryLow/40 via-transparent to-secondaryLow/40 dark:from-blue-900/20 dark:via-transparent dark:to-violet-900/20 pt-12 pb-6 px-4 sm:px-12 text-slate-600 dark:text-slate-400">
+        <footer className="relative bg-gradient-to-br from-primaryLow/40 via-transparent to-secondaryLow/40 dark:from-primary/10 dark:via-transparent dark:to-secondary/10 pt-12 pb-6 px-4 sm:px-12 text-slate-600 dark:text-slate-400">
             <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-secondary to-transparent opacity-50" />
 
             <div className="container w-full mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">

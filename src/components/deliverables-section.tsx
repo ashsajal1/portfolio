@@ -56,7 +56,7 @@ export default function DeliverablesSection() {
                             key={title}
                             className={`relative rounded-3xl p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10 ${
                                 featured
-                                    ? "bg-gradient-to-br from-primary to-secondary text-slate-50 shadow-xl shadow-primary/20"
+                                    ? "bg-gradient-to-br from-primary to-secondary text-slate-50 dark:text-slate-900 shadow-xl shadow-primary/20"
                                     : "border border-secondaryLow/50 dark:border-secondaryLow/20 bg-white/50 dark:bg-slate-900/50"
                             }`}
                         >
@@ -68,22 +68,22 @@ export default function DeliverablesSection() {
                             <div
                                 className={`mb-4 inline-flex items-center justify-center h-12 w-12 rounded-xl text-2xl ${
                                     featured
-                                        ? "bg-white/20 text-slate-50"
-                                        : "bg-gradient-to-br from-primary to-secondary text-slate-50 shadow-md shadow-primary/20"
+                                        ? "bg-white/20 dark:bg-slate-900/10 text-slate-50 dark:text-slate-900"
+                                        : "bg-gradient-to-br from-primary to-secondary text-slate-50 dark:text-slate-900 shadow-md shadow-primary/20"
                                 }`}
                             >
                                 {icon}
                             </div>
                             <h3
                                 className={`text-xl font-extrabold mb-2 ${
-                                    featured ? "text-slate-50" : "text-slate-800 dark:text-slate-100"
+                                    featured ? "text-slate-50 dark:text-slate-900" : "text-slate-800 dark:text-slate-100"
                                 }`}
                             >
                                 {title}
                             </h3>
                             <p
                                 className={`text-sm leading-relaxed mb-6 ${
-                                    featured ? "text-slate-100/90" : "text-slate-600 dark:text-slate-400"
+                                    featured ? "text-slate-100/90 dark:text-slate-900/80" : "text-slate-600 dark:text-slate-400"
                                 }`}
                             >
                                 {description}
@@ -93,10 +93,10 @@ export default function DeliverablesSection() {
                                     <li key={feature} className="flex items-start gap-2 text-sm">
                                         <FiCheckCircle
                                             className={`mt-0.5 h-4 w-4 shrink-0 ${
-                                                featured ? "text-slate-50" : "text-primary"
+                                                featured ? "text-slate-50 dark:text-slate-900" : "text-primary"
                                             }`}
                                         />
-                                        <span className={featured ? "text-slate-50" : "text-slate-600 dark:text-slate-400"}>
+                                        <span className={featured ? "text-slate-50 dark:text-slate-900" : "text-slate-600 dark:text-slate-400"}>
                                             {feature}
                                         </span>
                                     </li>

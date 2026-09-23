@@ -173,7 +173,7 @@ export default function AuditForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full rounded-lg bg-gradient-to-br from-primary to-secondary p-2.5 text-sm font-semibold text-slate-50 hover:to-secondaryHigh focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 disabled:opacity-60"
+        className="w-full rounded-lg bg-gradient-to-br from-primary to-secondary p-2.5 text-sm font-semibold text-slate-50 dark:text-slate-900 hover:to-secondaryHigh focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 disabled:opacity-60"
       >
         {isSubmitting ? 'Sending…' : 'Get My Free Audit'}
       </button>

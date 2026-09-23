@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-import { violet, blue, green } from "tailwindcss/colors";
 
 const config: Config = {
   darkMode: 'class',
@@ -16,11 +15,14 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        primaryLow: green[200],
-        primary: green[700],
-        secondary: blue[500],
-        secondaryLow: blue[200],
-        secondaryHigh: blue[800],
+        // Theme-aware brand colors — values come from CSS variables in
+        // globals.css so light mode gets deeper, readable shades while dark
+        // mode keeps the bright neon palette.
+        primaryLow: "rgb(var(--color-primary-low) / <alpha-value>)",
+        primary: "rgb(var(--color-primary) / <alpha-value>)",
+        secondary: "rgb(var(--color-secondary) / <alpha-value>)",
+        secondaryLow: "rgb(var(--color-secondary-low) / <alpha-value>)",
+        secondaryHigh: "rgb(var(--color-secondary-high) / <alpha-value>)",
       },
       keyframes: {
         float: {
