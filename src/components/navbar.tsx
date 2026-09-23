@@ -3,7 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { RiTwitterXLine, RiGithubFill } from "react-icons/ri";
-import { FiHome, FiFolder, FiSend, FiFileText, FiMenu, FiX, FiDownload } from "react-icons/fi";
+import { FiHome, FiFolder, FiFileText, FiMenu, FiX, FiDownload, FiSearch } from "react-icons/fi";
 import SwitchButton from "./switch-button";
 import Button from "./button";
 
@@ -96,8 +96,8 @@ export default function Navbar() {
               <Button label="Resume" icon={<FiFileText />} variant="outline" className="px-2.5 sm:px-4 py-1.5 text-sm" />
             </Link>
 
-            <Link href="mailto:ashsajal@yahoo.com" className="block">
-              <Button label="Hire Me" icon={<FiSend />} className="px-2.5 sm:px-4 py-1.5 text-sm" />
+            <Link href="/audit" className="block">
+              <Button label="Audit" icon={<FiSearch />} className="px-2.5 sm:px-4 py-1.5 text-sm" />
             </Link>
 
             <button
