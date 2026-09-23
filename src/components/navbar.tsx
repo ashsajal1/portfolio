@@ -2,8 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { RiTwitterXLine, RiGithubFill } from "react-icons/ri";
-import { FiHome, FiFolder, FiFileText, FiMenu, FiX, FiDownload, FiSearch } from "react-icons/fi";
+import { FiHome, FiFolder, FiFileText, FiMenu, FiX, FiSearch } from "react-icons/fi";
 import SwitchButton from "./switch-button";
 import Button from "./button";
 
@@ -66,35 +65,7 @@ export default function Navbar() {
           </ul>
 
           <div className="flex items-center gap-2 sm:gap-3">
-            <Link
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://x.com/ashsajal1"
-              className="hidden sm:block text-slate-500 dark:text-slate-400 transition-all duration-200 hover:text-primary dark:hover:text-secondary hover:scale-110"
-              aria-label="X (Twitter) profile"
-            >
-              <RiTwitterXLine className="h-5 w-5" />
-            </Link>
-            <Link
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://github.com/ashsajal1"
-              className="hidden sm:block text-slate-500 dark:text-slate-400 transition-all duration-200 hover:text-primary dark:hover:text-secondary hover:scale-110"
-              aria-label="GitHub profile"
-            >
-              <RiGithubFill className="h-5 w-5" />
-            </Link>
-
             <SwitchButton />
-
-            <Link
-              href="/resume.pdf"
-              download
-              className="hidden sm:block"
-              aria-label="Download resume"
-            >
-              <Button label="Resume" icon={<FiFileText />} variant="outline" className="px-2.5 sm:px-4 py-1.5 text-sm" />
-            </Link>
 
             <Link href="/audit" className="block">
               <Button label="Audit" icon={<FiSearch />} className="px-2.5 sm:px-4 py-1.5 text-sm" />
@@ -132,37 +103,6 @@ export default function Navbar() {
               </Link>
             );
           })}
-
-          <div className="flex items-center gap-3 pt-3 mt-2 border-t border-secondaryLow/40 dark:border-secondaryLow/20">
-            <Link
-              href="/resume.pdf"
-              download
-              className="inline-flex items-center gap-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-secondary"
-              aria-label="Download resume"
-            >
-              <FiDownload className="h-4 w-4" />
-              Resume
-            </Link>
-
-            <Link
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://x.com/ashsajal1"
-              className="text-slate-500 dark:text-slate-400 transition-all duration-200 hover:text-primary dark:hover:text-secondary hover:scale-110"
-              aria-label="X (Twitter) profile"
-            >
-              <RiTwitterXLine className="h-5 w-5" />
-            </Link>
-            <Link
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://github.com/ashsajal1"
-              className="text-slate-500 dark:text-slate-400 transition-all duration-200 hover:text-primary dark:hover:text-secondary hover:scale-110"
-              aria-label="GitHub profile"
-            >
-              <RiGithubFill className="h-5 w-5" />
-            </Link>
-          </div>
         </div>
       )}
     </nav>

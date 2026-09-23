@@ -2,8 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import { RiTwitterXLine } from "react-icons/ri";
-import { FiMail, FiPhone, FiHome, FiFolder, FiSearch, FiDownload } from "react-icons/fi";
-import { projects } from '@/lib/projectsList';
+import { FiMail, FiPhone, FiHome, FiSearch } from "react-icons/fi";
 import BackToTop from './back-to-top';
 
 const socialLinks = [
@@ -15,8 +14,6 @@ const socialLinks = [
 
 const quickLinks = [
   { href: "/", label: "Home", icon: <FiHome /> },
-  { href: "/projects", label: "Projects", icon: <FiFolder /> },
-  { href: "/resume.pdf", label: "Resume", icon: <FiDownload />, download: true },
   { href: "/audit", label: "Free Audit", icon: <FiSearch /> },
 ];
 
@@ -27,7 +24,7 @@ export default function Footer() {
         <footer className="relative bg-gradient-to-br from-primaryLow/40 via-transparent to-secondaryLow/40 dark:from-primary/10 dark:via-transparent dark:to-secondary/10 pt-12 pb-6 px-4 sm:px-12 text-slate-600 dark:text-slate-400">
             <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-secondary to-transparent opacity-50" />
 
-            <div className="container w-full mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+            <div className="container w-full mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
                 <div>
                     <h3 className="text-2xl font-bold mb-3 gradient-text">Sajal</h3>
                     <p className="text-sm leading-relaxed">
@@ -54,11 +51,10 @@ export default function Footer() {
                 <div>
                     <h3 className="text-lg font-bold mb-4 gradient-text">Quick Links</h3>
                     <ul className="space-y-2.5 text-sm">
-                        {quickLinks.map(({ href, label, icon, download }) => (
+                        {quickLinks.map(({ href, label, icon }) => (
                             <li key={href}>
                                 <Link
                                     href={href}
-                                    {...(download ? { download: true } : {})}
                                     className="inline-flex items-center gap-2 transition-all duration-200 hover:text-primary dark:hover:text-secondary hover:translate-x-1"
                                 >
                                     <span className="text-secondary dark:text-secondaryLow">{icon}</span>
@@ -66,30 +62,6 @@ export default function Footer() {
                                 </Link>
                             </li>
                         ))}
-                    </ul>
-                </div>
-
-                <div>
-                    <h3 className="text-lg font-bold mb-4 gradient-text">Projects</h3>
-                    <ul className="space-y-2.5 text-sm">
-                        {projects.slice(0, 3).map(({ title, url, repo }) => (
-                            <li key={repo}>
-                                <Link
-                                    href={url ?? repo}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 transition-all duration-200 hover:text-primary dark:hover:text-secondary hover:translate-x-1"
-                                >
-                                    <span className="h-1.5 w-1.5 rounded-full bg-gradient-to-r from-primary to-secondary shrink-0" />
-                                    {title}
-                                </Link>
-                            </li>
-                        ))}
-                        <li>
-                            <Link href="/projects" className="inline-flex items-center gap-1 text-secondary dark:text-secondaryLow text-sm font-medium hover:gap-2 transition-all duration-200">
-                                See more...
-                            </Link>
-                        </li>
                     </ul>
                 </div>
 

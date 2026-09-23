@@ -10,7 +10,7 @@ const SwitchButton = () => {
   useEffect(() => setMounted(true), []);
 
   if (!mounted) {
-    return <div className="w-12 h-6 rounded-full bg-primaryLow dark:bg-slate-700" aria-hidden />;
+    return <div className="h-9 w-9" aria-hidden />;
   }
 
   const isDark = resolvedTheme === 'dark';
@@ -18,17 +18,11 @@ const SwitchButton = () => {
   return (
     <button
       type="button"
-      role="switch"
-      aria-checked={isDark}
-      aria-label="Toggle dark mode"
+      aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
       onClick={() => setTheme(isDark ? 'light' : 'dark')}
-      className="relative flex items-center w-12 h-6 rounded-full bg-primaryLow dark:bg-slate-700 transition-colors duration-300 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary"
+      className="flex items-center justify-center h-9 w-9 rounded-lg text-slate-500 dark:text-slate-300 transition-all duration-200 hover:text-primary dark:hover:text-secondary hover:bg-primary/10 dark:hover:bg-secondary/20 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary"
     >
-      <span
-        className={`flex items-center justify-center w-5 h-5 rounded-full bg-gradient-to-br from-primary to-secondary text-slate-50 shadow-md transform transition-transform duration-300 ${isDark ? 'translate-x-6' : 'translate-x-1'}`}
-      >
-        {isDark ? <FiMoon className="h-3 w-3" /> : <FiSun className="h-3 w-3" />}
-      </span>
+      {isDark ? <FiSun className="h-5 w-5" /> : <FiMoon className="h-5 w-5" />}
     </button>
   );
 };
