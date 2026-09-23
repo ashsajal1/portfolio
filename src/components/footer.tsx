@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import { RiTwitterXLine } from "react-icons/ri";
-import { FiMail, FiPhone, FiHome, FiFolder, FiSend, FiDownload } from "react-icons/fi";
+import { FiMail, FiPhone, FiHome, FiFolder, FiSearch, FiDownload } from "react-icons/fi";
 import { projects } from '@/lib/projectsList';
 import BackToTop from './back-to-top';
 
@@ -17,7 +17,7 @@ const quickLinks = [
   { href: "/", label: "Home", icon: <FiHome /> },
   { href: "/projects", label: "Projects", icon: <FiFolder /> },
   { href: "/resume.pdf", label: "Resume", icon: <FiDownload />, download: true },
-  { href: "mailto:ashsajal@yahoo.com", label: "Hire Me", icon: <FiSend /> },
+  { href: "/audit", label: "Free Audit", icon: <FiSearch /> },
 ];
 
 export default function Footer() {
@@ -31,8 +31,8 @@ export default function Footer() {
                 <div>
                     <h3 className="text-2xl font-bold mb-3 gradient-text">Sajal</h3>
                     <p className="text-sm leading-relaxed">
-                        Full-stack developer crafting modern, AI-powered web experiences.
-                        Open to collaborations and new opportunities.
+                        Website audit &amp; optimization — find the issues holding your
+                        site back, get them fixed, and verify the results.
                     </p>
                     <div className="flex items-center space-x-3 mt-5">
                         {socialLinks.map(({ href, label, icon }) => (

@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Button from "./button";
-import { FiSend } from "react-icons/fi";
+import { FiSearch } from "react-icons/fi";
 
 export default function CTASection() {
     return (
@@ -12,17 +12,17 @@ export default function CTASection() {
                     <div className="pointer-events-none absolute -bottom-24 -left-16 h-64 w-64 rounded-full bg-white/10 blur-3xl" />
 
                     <h2 className="relative text-2xl sm:text-4xl font-extrabold text-slate-50">
-                        Have a Project in Mind?
+                        Want to Know What&apos;s Holding Your Website Back?
                     </h2>
                     <p className="relative text-slate-100/90 mt-3 max-w-lg mx-auto text-sm sm:text-base">
-                        Let&apos;s turn your idea into a digital product that moves your business forward. Free consultation, no strings attached.
+                        Get a free audit of your site — no jargon, no obligations, just a clear picture of what to fix first.
                     </p>
 
                     <div className="relative mt-7 flex items-center justify-center">
-                        <Link href="mailto:ashsajal@yahoo.com">
+                        <Link href="/audit">
                             <Button
-                                label="Start a Conversation"
-                                icon={<FiSend />}
+                                label="Get a Free Website Audit"
+                                icon={<FiSearch />}
                                 variant="light"
                             />
                         </Link>

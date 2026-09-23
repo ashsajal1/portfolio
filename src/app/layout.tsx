@@ -10,34 +10,34 @@ const inter = Urbanist({ subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL("https://ashsajal.netlify.app"),
   title: {
-    default: "Ashfiquzzaman Sajal — Full-Stack Developer Portfolio",
-    template: "%s | Ashfiquzzaman Sajal",
+    default: "Website Audit & Optimization — Find. Fix. Verify.",
+    template: "%s | Website Audit & Optimization",
   },
   description:
-    "Ashfiquzzaman Sajal is a full-stack developer building modern, AI-powered web experiences with React, Next.js, TypeScript, and Node.js. Explore projects, blog insights, and services.",
+    "Your website might look great and still have problems under the hood. Get a website audit across performance, SEO, accessibility, security, mobile experience, technical quality, and UX — then get the issues fixed and verified.",
   keywords: [
-    "Ashfiquzzaman Sajal",
-    "Full-Stack Developer",
-    "React",
-    "Next.js",
-    "TypeScript",
-    "Web Developer",
-    "Portfolio",
+    "Website Audit",
+    "Website Optimization",
+    "Core Web Vitals",
+    "Technical SEO",
+    "Website Accessibility",
+    "Site Speed Optimization",
+    "UX Audit",
   ],
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://ashsajal.netlify.app",
-    siteName: "Ashfiquzzaman Sajal Portfolio",
-    title: "Ashfiquzzaman Sajal — Full-Stack Developer Portfolio",
+    siteName: "Website Audit & Optimization",
+    title: "Website Audit & Optimization — Find. Fix. Verify.",
     description:
-      "Modern, AI-powered web experiences built with React, Next.js, and TypeScript.",
+      "Uncover what's holding your website back — performance, SEO, accessibility, security, UX — and get it fixed and verified.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ashfiquzzaman Sajal — Full-Stack Developer Portfolio",
+    title: "Website Audit & Optimization — Find. Fix. Verify.",
     description:
-      "Modern, AI-powered web experiences built with React, Next.js, and TypeScript.",
+      "Uncover what's holding your website back — performance, SEO, accessibility, security, UX — and get it fixed and verified.",
   },
 };
 

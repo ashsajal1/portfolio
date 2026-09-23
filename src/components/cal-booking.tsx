@@ -68,7 +68,7 @@ export default function CalBooking() {
             Book a Free Consultation
           </h2>
           <p className="text-slate-600 dark:text-slate-400 mt-3 max-w-xl mx-auto text-sm sm:text-base">
-            Pick a time that works for you. We&apos;ll talk through your project, goals, and how the right software can grow your business.
+            Pick a time that works for you. We&apos;ll talk through your website, your audit results, and the fastest path to fixing what matters most.
           </p>
           <button
             type="button"
