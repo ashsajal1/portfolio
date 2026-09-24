@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { blogPosts } from "@/lib/blogPosts";
 
-const BASE_URL = "https://ashsajal.vercel.app";
+const BASE_URL = "https://ashsajal.netlify.app";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

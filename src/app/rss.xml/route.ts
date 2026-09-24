@@ -1,6 +1,6 @@
 import { blogPosts } from "@/lib/blogPosts";
 
-const BASE_URL = "https://ashsajal.vercel.app";
+const BASE_URL = "https://ashsajal.netlify.app";
 
 function escapeXml(str: string): string {
   return str
