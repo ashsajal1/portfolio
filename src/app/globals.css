@@ -4,9 +4,12 @@
 
 @layer base {
   :root {
+    /* Light mode uses darkened shades so text/icons in these colors
+       meet WCAG 2 AA (4.5:1) on white. Dark mode keeps the bright
+       neon palette (light-on-dark passes). */
     --color-primary-low: 216 251 229;
-    --color-primary: 22 163 74;
-    --color-secondary: 13 148 136;
+    --color-primary: 21 128 61;
+    --color-secondary: 15 118 110;
     --color-secondary-low: 215 250 245;
     --color-secondary-high: 15 118 110;
   }

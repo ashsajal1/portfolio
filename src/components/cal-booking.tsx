@@ -81,8 +81,7 @@ export default function CalBooking() {
 
         <div
           id="my-cal-inline"
-          className="mx-auto rounded-2xl border border-secondaryLow/50 dark:border-secondaryLow/20 overflow-hidden bg-white/50 dark:bg-slate-900/50 shadow-sm"
-          style={{ minWidth: "320px", height: "720px" }}
+          className="mx-auto w-full max-w-full rounded-2xl border border-secondaryLow/50 dark:border-secondaryLow/20 overflow-hidden bg-white/50 dark:bg-slate-900/50 shadow-sm min-h-[720px] h-[720px]"
         />
       </div>
     </section>
