@@ -1,0 +1,10 @@
+# Netlify CDN headers mirror next.config.mjs `headers()` so security
+# headers apply even when pages are served as pre-rendered static HTML.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://cal.com https://*.cal.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https:; connect-src 'self' https://api.web3forms.com https://cal.com https://*.cal.com; frame-src https://cal.com https://*.cal.com; form-action 'self' https://api.web3forms.com; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; upgrade-insecure-requests"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=(), usb=(), fullscreen=(self)"
+    X-Content-Type-Options = "nosniff"
