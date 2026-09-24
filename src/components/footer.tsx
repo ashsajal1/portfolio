@@ -6,15 +6,15 @@ import { FiMail, FiPhone, FiHome, FiSearch } from "react-icons/fi";
 import BackToTop from './back-to-top';
 
 const socialLinks = [
-  { href: "https://github.com/ashsajal1", label: "GitHub", icon: <FaGithub /> },
-  { href: "https://linkedin.com/in/ashsajal", label: "LinkedIn", icon: <FaLinkedin /> },
-  { href: "https://x.com/ashsajal1", label: "X (Twitter)", icon: <RiTwitterXLine /> },
-  { href: "https://instagram.com/ashsajal1", label: "Instagram", icon: <FaInstagram /> },
+  { href: "https://github.com/ashsajal1", label: "GitHub", icon: <FaGithub aria-hidden="true" /> },
+  { href: "https://linkedin.com/in/ashsajal", label: "LinkedIn", icon: <FaLinkedin aria-hidden="true" /> },
+  { href: "https://x.com/ashsajal1", label: "X (Twitter)", icon: <RiTwitterXLine aria-hidden="true" /> },
+  { href: "https://instagram.com/ashsajal1", label: "Instagram", icon: <FaInstagram aria-hidden="true" /> },
 ];
 
 const quickLinks = [
-  { href: "/", label: "Home", icon: <FiHome /> },
-  { href: "/audit", label: "Free Audit", icon: <FiSearch /> },
+  { href: "/", label: "Home", icon: <FiHome aria-hidden="true" /> },
+  { href: "/audit", label: "Free Audit", icon: <FiSearch aria-hidden="true" /> },
 ];
 
 export default function Footer() {
@@ -26,7 +26,7 @@ export default function Footer() {
 
             <div className="container w-full mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
                 <div>
-                    <h3 className="text-2xl font-bold mb-3 gradient-text">Sajal</h3>
+                    <h2 className="text-2xl font-bold mb-3 gradient-text">Sajal</h2>
                     <p className="text-sm leading-relaxed">
                         Website audit &amp; optimization — find the issues holding your
                         site back, get them fixed, and verify the results.
@@ -49,7 +49,7 @@ export default function Footer() {
                 </div>
 
                 <div>
-                    <h3 className="text-lg font-bold mb-4 gradient-text">Quick Links</h3>
+                    <h2 className="text-lg font-bold mb-4 gradient-text">Quick Links</h2>
                     <ul className="space-y-2.5 text-sm">
                         {quickLinks.map(({ href, label, icon }) => (
                             <li key={href}>
@@ -66,16 +66,16 @@ export default function Footer() {
                 </div>
 
                 <div>
-                    <h3 className="text-lg font-bold mb-4 gradient-text">Get in Touch</h3>
+                    <h2 className="text-lg font-bold mb-4 gradient-text">Get in Touch</h2>
                     <ul className="space-y-3 text-sm">
                         <li>
                             <a
                                 href="mailto:ashsajal@yahoo.com"
                                 className="inline-flex items-start gap-2.5 transition-all duration-200 hover:text-primary dark:hover:text-secondary"
                             >
-                                <span className="mt-0.5 text-secondary dark:text-secondaryLow"><FiMail /></span>
+                                <span className="mt-0.5 text-secondary dark:text-secondaryLow"><FiMail aria-hidden="true" /></span>
                                 <span>
-                                    <span className="block text-xs uppercase tracking-wide text-slate-400 dark:text-slate-500">Email</span>
+                                    <span className="block text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400">Email</span>
                                     ashsajal@yahoo.com
                                 </span>
                             </a>
@@ -85,9 +85,9 @@ export default function Footer() {
                                 href="tel:+8801608478333"
                                 className="inline-flex items-start gap-2.5 transition-all duration-200 hover:text-primary dark:hover:text-secondary"
                             >
-                                <span className="mt-0.5 text-secondary dark:text-secondaryLow"><FiPhone /></span>
+                                <span className="mt-0.5 text-secondary dark:text-secondaryLow"><FiPhone aria-hidden="true" /></span>
                                 <span>
-                                    <span className="block text-xs uppercase tracking-wide text-slate-400 dark:text-slate-500">Phone</span>
+                                    <span className="block text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400">Phone</span>
                                     +8801608478333
                                 </span>
                             </a>

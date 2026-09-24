@@ -22,7 +22,7 @@ export default function BlogPreviewSection() {
             className="inline-flex items-center gap-2 text-sm font-semibold text-primary dark:text-secondary transition-all duration-200 hover:gap-3 shrink-0"
           >
             View all posts
-            <FiArrowRight />
+            <FiArrowRight aria-hidden="true" />
           </Link>
         </div>
 
@@ -34,18 +34,18 @@ export default function BlogPreviewSection() {
             >
               <div className="flex items-center gap-4 text-xs text-slate-500 dark:text-slate-400 mb-3">
                 <span className="inline-flex items-center gap-1.5">
-                  <FiCalendar />
+                  <FiCalendar aria-hidden="true" />
                   {post.date}
                 </span>
                 <span className="inline-flex items-center gap-1.5">
-                  <FiClock />
+                  <FiClock aria-hidden="true" />
                   {post.readTime}
                 </span>
               </div>
 
-              <h4 className="text-lg font-bold text-slate-800 dark:text-slate-100 mb-2 group-hover:gradient-text transition-all duration-200">
+              <h3 className="text-lg font-bold text-slate-800 dark:text-slate-100 mb-2 group-hover:gradient-text transition-all duration-200">
                 {post.title}
-              </h4>
+              </h3>
               <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4 line-clamp-3">
                 {post.excerpt}
               </p>
@@ -55,7 +55,7 @@ export default function BlogPreviewSection() {
                 className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-primary dark:text-secondary transition-all duration-200 hover:gap-3"
               >
                 Read article
-                <FiArrowRight />
+                <FiArrowRight aria-hidden="true" />
               </Link>
             </article>
           ))}

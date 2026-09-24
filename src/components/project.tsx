@@ -17,33 +17,29 @@ export default function Project({ url, image, title, description, repo }: { url?
                     />
                 ) : (
                     <div className="h-full w-full flex flex-col items-center justify-center gap-3 bg-gradient-to-br from-primary/10 to-secondary/10 dark:from-primary/20 dark:to-secondary/20">
-                        <FaGithub className="text-5xl text-primary dark:text-secondary" />
+                        <FaGithub aria-hidden="true" className="text-5xl text-primary dark:text-secondary" />
                         <span className="text-sm font-medium text-slate-500 dark:text-slate-400">GitHub Repository</span>
                     </div>
                 )}
             </div>
 
             <div className="w-full">
-                <h3 className="text-lg font-bold gradient-text">{title}</h3>
+                <h2 className="text-lg font-bold gradient-text">{title}</h2>
                 <p className="text-sm text-slate-600 dark:text-slate-400 line-clamp-3">{description}</p>
             </div>
 
             <div className="flex flex-col sm:flex-row items-center justify-between gap-2 w-full mt-auto">
                 {url ? (
-                    <Link className="w-full" href={url} target="_blank" rel="noopener noreferrer">
-                        <button className="p-2 bg-primary text-sm text-slate-50 rounded-lg hover:bg-primaryLow hover:text-slate-900 dark:hover:text-slate-50 hover:scale-[1.02] active:scale-95 transition-all duration-200 w-full flex items-center justify-center gap-2">
-                            <FiExternalLink />
-                            Preview
-                        </button>
+                    <Link href={url} target="_blank" rel="noopener noreferrer" className="w-full p-2 bg-primary text-sm text-slate-50 rounded-lg hover:bg-primaryLow hover:text-slate-900 dark:hover:text-slate-50 hover:scale-[1.02] active:scale-95 transition-all duration-200 flex items-center justify-center gap-2">
+                        <FiExternalLink aria-hidden="true" />
+                        Preview
                     </Link>
                 ) : (
                     <div className="w-full" />
                 )}
-                <Link className="w-full" href={repo} target="_blank" rel="noopener noreferrer">
-                    <button className="p-2 border border-primary text-sm text-primary hover:bg-primary hover:text-slate-50 rounded-lg hover:scale-[1.02] active:scale-95 transition-all duration-200 w-full flex items-center justify-center gap-2">
-                        <FaGithub />
-                        GitHub repo
-                    </button>
+                <Link href={repo} target="_blank" rel="noopener noreferrer" className="w-full p-2 border border-primary text-sm text-primary hover:bg-primary hover:text-slate-50 rounded-lg hover:scale-[1.02] active:scale-95 transition-all duration-200 flex items-center justify-center gap-2">
+                    <FaGithub aria-hidden="true" />
+                    GitHub repo
                 </Link>
 
             </div>
