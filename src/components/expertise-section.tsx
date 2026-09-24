@@ -16,32 +16,32 @@ const expertise = [
     {
         title: "Full-Stack Development",
         text: "React, Next.js, TypeScript, Node.js — I read your real codebase, not just the homepage.",
-        icon: <FiCode />,
+        icon: <FiCode aria-hidden="true" />,
     },
     {
         title: "Performance",
         text: "Core Web Vitals, load times, and asset optimization that visitors can feel.",
-        icon: <FiZap />,
+        icon: <FiZap aria-hidden="true" />,
     },
     {
         title: "Technical SEO",
         text: "Site structure, metadata, and crawlability so search engines rank you higher.",
-        icon: <FiSearch />,
+        icon: <FiSearch aria-hidden="true" />,
     },
     {
         title: "Accessibility",
         text: "WCAG-minded reviews covering contrast, keyboard use, and screen readers.",
-        icon: <FiEye />,
+        icon: <FiEye aria-hidden="true" />,
     },
     {
         title: "Security Fundamentals",
         text: "HTTPS, headers, and safe defaults that protect your visitors and data.",
-        icon: <FiShield />,
+        icon: <FiShield aria-hidden="true" />,
     },
     {
         title: "UX & Conversions",
         text: "Friction-free user journeys that turn more visitors into customers.",
-        icon: <FiLayout />,
+        icon: <FiLayout aria-hidden="true" />,
     },
 ];
 
@@ -58,7 +58,8 @@ export default function ExpertiseSection() {
                                     src="/profile.png"
                                     alt="Sajal — website audit and optimization specialist"
                                     fill
-                                    sizes="288px"
+                                    sizes="(max-width: 640px) 256px, 288px"
+                                    priority
                                     className="object-cover"
                                 />
                             </div>
@@ -102,7 +103,7 @@ export default function ExpertiseSection() {
 
                         <div className="mt-6">
                             <Link href="/audit">
-                                <Button label="Get My Free Audit" icon={<FiArrowRight />} />
+                                <Button label="Get My Free Audit" icon={<FiArrowRight aria-hidden="true" />} />
                             </Link>
                         </div>
                     </div>

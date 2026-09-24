@@ -22,7 +22,7 @@ export default function CTASection() {
                         <Link href="/audit">
                             <Button
                                 label="Get a Free Website Audit"
-                                icon={<FiSearch />}
+                                icon={<FiSearch aria-hidden="true" />}
                                 variant="light"
                             />
                         </Link>

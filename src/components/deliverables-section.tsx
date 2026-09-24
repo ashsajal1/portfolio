@@ -14,7 +14,7 @@ const plans = [
             "Plain-language fix recommendations",
             "Delivered to your inbox",
         ],
-        icon: <FiFileText />,
+        icon: <FiFileText aria-hidden="true" />,
         cta: "Get a Free Sample Audit",
     },
     {
@@ -27,7 +27,7 @@ const plans = [
             "Re-tested & verified after fixes",
             "Works with your existing codebase",
         ],
-        icon: <FiTool />,
+        icon: <FiTool aria-hidden="true" />,
         cta: "Start With a Free Audit",
         featured: true,
     },
@@ -91,7 +91,7 @@ export default function DeliverablesSection() {
                             <ul className="space-y-2.5 mb-8">
                                 {features.map((feature) => (
                                     <li key={feature} className="flex items-start gap-2 text-sm">
-                                        <FiCheckCircle
+                                        <FiCheckCircle aria-hidden="true"
                                             className={`mt-0.5 h-4 w-4 shrink-0 ${
                                                 featured ? "text-slate-50 dark:text-slate-900" : "text-primary"
                                             }`}
@@ -105,7 +105,7 @@ export default function DeliverablesSection() {
                             <Link href="/audit">
                                 <Button
                                     label={cta}
-                                    icon={<FiSearch />}
+                                    icon={<FiSearch aria-hidden="true" />}
                                     variant={featured ? "light" : "primary"}
                                     className="w-full"
                                 />

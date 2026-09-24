@@ -7,9 +7,9 @@ import SwitchButton from "./switch-button";
 import Button from "./button";
 
 const navLinks = [
-  { href: "/", label: "Home", icon: <FiHome /> },
-  { href: "/projects", label: "Projects", icon: <FiFolder /> },
-  { href: "/blog", label: "Blog", icon: <FiFileText /> },
+  { href: "/", label: "Home", icon: <FiHome aria-hidden="true" /> },
+  { href: "/projects", label: "Projects", icon: <FiFolder aria-hidden="true" /> },
+  { href: "/blog", label: "Blog", icon: <FiFileText aria-hidden="true" /> },
 ];
 
 export default function Navbar() {
@@ -68,7 +68,7 @@ export default function Navbar() {
             <SwitchButton />
 
             <Link href="/audit" className="block">
-              <Button label="Audit" icon={<FiSearch />} className="px-2.5 sm:px-4 py-1.5 text-sm" />
+              <Button label="Audit" icon={<FiSearch aria-hidden="true" />} className="px-2.5 sm:px-4 py-1.5 text-sm" />
             </Link>
 
             <button
@@ -78,7 +78,7 @@ export default function Navbar() {
               aria-expanded={menuOpen}
               className="sm:hidden flex items-center justify-center h-9 w-9 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-primary/10 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary"
             >
-              {menuOpen ? <FiX className="h-5 w-5" /> : <FiMenu className="h-5 w-5" />}
+              {menuOpen ? <FiX aria-hidden="true" className="h-5 w-5" /> : <FiMenu aria-hidden="true" className="h-5 w-5" />}
             </button>
           </div>
         </div>

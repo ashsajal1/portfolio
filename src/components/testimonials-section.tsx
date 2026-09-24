@@ -45,10 +45,10 @@ export default function TestimonialsSection() {
               key={name}
               className="group relative flex flex-col rounded-2xl border border-secondaryLow/50 dark:border-secondaryLow/20 bg-white/50 dark:bg-slate-900/50 p-6 shadow-sm hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1 transition-all duration-300"
             >
-              <FiMessageSquare className="text-3xl text-primary/30 dark:text-secondary/30 mb-3" />
+              <FiMessageSquare aria-hidden="true" className="text-3xl text-primary/30 dark:text-secondary/30 mb-3" />
               <div className="flex gap-0.5 mb-3 text-secondary dark:text-secondaryLow">
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <FaStar key={i} className="h-4 w-4" />
+                  <FaStar aria-hidden="true" key={i} className="h-4 w-4" />
                 ))}
               </div>
               <blockquote className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed flex-1">

@@ -3,10 +3,10 @@ import Image from "next/image";
 import { FiAward, FiBriefcase, FiCode, FiCoffee } from "react-icons/fi";
 
 const highlights = [
-  { icon: <FiBriefcase />, label: "5+ Projects Delivered", sub: "For clients & products" },
-  { icon: <FiCode />, label: "Full-Stack Focus", sub: "React, Next.js, Node" },
-  { icon: <FiAward />, label: "AI-Powered Builds", sub: "Automation & insights" },
-  { icon: <FiCoffee />, label: "Open to Collaborations", sub: "Freelance & full-time" },
+  { icon: <FiBriefcase aria-hidden="true" />, label: "5+ Projects Delivered", sub: "For clients & products" },
+  { icon: <FiCode aria-hidden="true" />, label: "Full-Stack Focus", sub: "React, Next.js, Node" },
+  { icon: <FiAward aria-hidden="true" />, label: "AI-Powered Builds", sub: "Automation & insights" },
+  { icon: <FiCoffee aria-hidden="true" />, label: "Open to Collaborations", sub: "Freelance & full-time" },
 ];
 
 export default function AboutSection() {

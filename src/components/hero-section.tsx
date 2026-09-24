@@ -50,17 +50,17 @@ export default function HeroSection() {
 
                     <div className='flex items-center gap-2 mt-6 flex-wrap justify-center sm:justify-start'>
                         <Link href='/audit'>
-                            <Button label='Get a Free Website Audit' icon={<FiSearch />}></Button>
+                            <Button label='Get a Free Website Audit' icon={<FiSearch aria-hidden="true" />}></Button>
                         </Link>
                         <Link href='/#process'>
-                            <Button label='See How It Works' icon={<FiCheckCircle />} variant='outline' />
+                            <Button label='See How It Works' icon={<FiCheckCircle aria-hidden="true" />} variant='outline' />
                         </Link>
                     </div>
 
                     <div className='flex flex-wrap items-center gap-x-4 gap-y-1 mt-5 text-xs text-slate-500 dark:text-slate-400'>
                         {trustPoints.map((point) => (
                             <span key={point} className='inline-flex items-center gap-1'>
-                                <FiCheckCircle className='text-secondary' />
+                                <FiCheckCircle aria-hidden="true" className='text-secondary' />
                                 {point}
                             </span>
                         ))}
@@ -84,7 +84,7 @@ export default function HeroSection() {
                         </ul>
                         <div className='px-5 py-3 bg-primary/5 dark:bg-secondary/10 border-t border-secondaryLow/40 dark:border-secondaryLow/20'>
                             <p className='inline-flex items-center gap-1.5 text-xs font-semibold text-primary'>
-                                <FiCheckCircle />
+                                <FiCheckCircle aria-hidden="true" />
                                 Fixed &amp; verified after implementation
                             </p>
                         </div>

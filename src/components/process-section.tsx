@@ -7,28 +7,28 @@ const steps = [
         title: "Audit",
         description:
             "I scan your website and identify technical and user-facing issues.",
-        icon: <FiSearch />,
+        icon: <FiSearch aria-hidden="true" />,
     },
     {
         number: "02",
         title: "Prioritize",
         description:
             "Issues are organized by severity and potential impact, so you know what actually needs attention.",
-        icon: <FiList />,
+        icon: <FiList aria-hidden="true" />,
     },
     {
         number: "03",
         title: "Fix",
         description:
             "I implement the necessary improvements in your website instead of leaving you with a long checklist.",
-        icon: <FiTool />,
+        icon: <FiTool aria-hidden="true" />,
     },
     {
         number: "04",
         title: "Verify",
         description:
             "I re-test the website after the fixes to make sure the improvements actually worked.",
-        icon: <FiCheckCircle />,
+        icon: <FiCheckCircle aria-hidden="true" />,
     },
 ];
 

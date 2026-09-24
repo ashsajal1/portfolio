@@ -6,25 +6,25 @@ const services = [
         title: "Business Websites",
         description:
             "High-converting, fast, and mobile-first websites that turn visitors into paying customers and make your brand look credible.",
-        icon: <FiGlobe />,
+        icon: <FiGlobe aria-hidden="true" />,
     },
     {
         title: "Web Applications",
         description:
             "Custom dashboards and tools that streamline your operations, cut manual work, and keep your team productive.",
-        icon: <FiLayout />,
+        icon: <FiLayout aria-hidden="true" />,
     },
     {
         title: "AI-Powered Solutions",
         description:
             "Integrate AI to automate repetitive tasks and unlock insights — giving your business a competitive edge.",
-        icon: <FiZap />,
+        icon: <FiZap aria-hidden="true" />,
     },
     {
         title: "Maintenance & Support",
         description:
             "Reliable updates, fixes, and improvements so your platform stays secure and you can focus on running your business.",
-        icon: <FiSettings />,
+        icon: <FiSettings aria-hidden="true" />,
     },
 ];
 

@@ -41,9 +41,9 @@ export default function ExperienceSection() {
             >
               <div className="mb-4 inline-flex items-center justify-center h-12 w-12 rounded-xl bg-gradient-to-br from-primary to-secondary text-slate-50 text-xl shadow-md shadow-primary/20">
                 {type === "education" ? (
-                  <FiBook className="h-5 w-5" />
+                  <FiBook aria-hidden="true" className="h-5 w-5" />
                 ) : (
-                  <FiBriefcase className="h-5 w-5" />
+                  <FiBriefcase aria-hidden="true" className="h-5 w-5" />
                 )}
               </div>
 

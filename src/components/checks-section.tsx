@@ -16,52 +16,52 @@ const checks = [
     {
         title: "Performance & Core Web Vitals",
         description: "Load speed, responsiveness, and visual stability measured the way Google ranks you.",
-        icon: <FiZap />,
+        icon: <FiZap aria-hidden="true" />,
     },
     {
         title: "Technical SEO",
         description: "Meta tags, headings, sitemaps, and crawlability that decide whether you get found.",
-        icon: <FiSearch />,
+        icon: <FiSearch aria-hidden="true" />,
     },
     {
         title: "Accessibility",
         description: "Contrast, keyboard navigation, and screen-reader support so nobody is locked out.",
-        icon: <FiEye />,
+        icon: <FiEye aria-hidden="true" />,
     },
     {
         title: "Mobile Responsiveness",
         description: "How your site holds up on real phones — layout, touch targets, and readability.",
-        icon: <FiSmartphone />,
+        icon: <FiSmartphone aria-hidden="true" />,
     },
     {
         title: "Security Fundamentals",
         description: "HTTPS, headers, and common exposures that put your visitors and data at risk.",
-        icon: <FiShield />,
+        icon: <FiShield aria-hidden="true" />,
     },
     {
         title: "HTML & Technical Implementation",
         description: "Semantic markup, valid structure, and under-the-hood issues hurting quality.",
-        icon: <FiCode />,
+        icon: <FiCode aria-hidden="true" />,
     },
     {
         title: "Images, Scripts & Assets",
         description: "Oversized files and render-blocking resources slowing every page down.",
-        icon: <FiImage />,
+        icon: <FiImage aria-hidden="true" />,
     },
     {
         title: "UX & Usability",
         description: "Navigation, clarity, and friction points that confuse visitors or kill trust.",
-        icon: <FiLayout />,
+        icon: <FiLayout aria-hidden="true" />,
     },
     {
         title: "Forms & Interactive Elements",
         description: "Contact forms, buttons, and flows tested to make sure they actually work.",
-        icon: <FiCheckSquare />,
+        icon: <FiCheckSquare aria-hidden="true" />,
     },
     {
         title: "Structure & Best Practices",
         description: "Site architecture, URLs, and standards compliance for long-term maintainability.",
-        icon: <FiLayers />,
+        icon: <FiLayers aria-hidden="true" />,
     },
 ];
 
