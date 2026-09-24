@@ -5,7 +5,7 @@ import { useState } from 'react';
 type Status = 'idle' | 'submitting' | 'success' | 'error';
 
 const inputClassName =
-  'w-full rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2 text-sm text-slate-900 dark:text-slate-100 placeholder:text-slate-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30 disabled:opacity-60';
+  'w-full rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2 text-sm text-slate-900 dark:text-slate-100 placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30 disabled:opacity-60';
 
 const labelClassName =
   'mb-1 block text-sm font-medium text-slate-700 dark:text-slate-300';
@@ -161,7 +161,8 @@ export default function AuditForm() {
         tabIndex={-1}
         autoComplete="off"
         className="hidden"
-        aria-hidden
+        aria-hidden="true"
+        aria-label="Leave this field unchecked"
       />
 
       {status === 'error' && (

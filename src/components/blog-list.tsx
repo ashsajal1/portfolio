@@ -31,8 +31,12 @@ export default function BlogList({ posts }: { posts: BlogPost[] }) {
     <div className="max-w-6xl mx-auto">
       <div className="flex flex-col sm:flex-row gap-3 mb-8">
         <div className="relative flex-1">
-          <FiSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
+          <FiSearch aria-hidden="true" className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
+          <label htmlFor="blog-search" className="sr-only">
+            Search articles
+          </label>
           <input
+            id="blog-search"
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
@@ -40,7 +44,11 @@ export default function BlogList({ posts }: { posts: BlogPost[] }) {
             className="w-full rounded-lg border border-secondaryLow/50 dark:border-secondaryLow/20 bg-white dark:bg-slate-800 pl-9 pr-3 py-2.5 text-sm text-slate-800 dark:text-slate-100 outline-none focus:border-primary focus:ring-2 focus:ring-primary/30 transition-colors"
           />
         </div>
+        <label htmlFor="blog-category" className="sr-only">
+          Filter by category
+        </label>
         <select
+          id="blog-category"
           value={activeTag ?? ""}
           onChange={(e) => setActiveTag(e.target.value || null)}
           className="rounded-lg border border-secondaryLow/50 dark:border-secondaryLow/20 bg-white dark:bg-slate-800 px-3 py-2.5 text-sm text-slate-800 dark:text-slate-100 outline-none focus:border-primary focus:ring-2 focus:ring-primary/30 transition-colors"
@@ -67,18 +75,18 @@ export default function BlogList({ posts }: { posts: BlogPost[] }) {
             >
               <div className="flex items-center gap-4 text-xs text-slate-500 dark:text-slate-400 mb-3">
                 <span className="inline-flex items-center gap-1.5">
-                  <FiCalendar />
+                  <FiCalendar aria-hidden="true" />
                   {post.date}
                 </span>
                 <span className="inline-flex items-center gap-1.5">
-                  <FiClock />
+                  <FiClock aria-hidden="true" />
                   {post.readTime}
                 </span>
               </div>
 
-              <h4 className="text-lg font-bold text-slate-800 dark:text-slate-100 mb-2 group-hover:gradient-text transition-all duration-200">
+              <h2 className="text-lg font-bold text-slate-800 dark:text-slate-100 mb-2 group-hover:gradient-text transition-all duration-200">
                 {post.title}
-              </h4>
+              </h2>
               <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
                 {post.excerpt}
               </p>
@@ -99,7 +107,7 @@ export default function BlogList({ posts }: { posts: BlogPost[] }) {
                 className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-primary dark:text-secondary transition-all duration-200 hover:gap-3"
               >
                 Read article
-                <FiArrowRight />
+                <FiArrowRight aria-hidden="true" />
               </Link>
             </article>
           ))}
