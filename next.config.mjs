@@ -10,9 +10,19 @@ const nextConfig = {
   },
   async headers() {
     // Cal.com booking embed + Web3Forms submissions must keep working.
+    // Next.js dev uses eval for HMR, so allow 'unsafe-eval' outside production.
+    const scriptSrc = [
+      "'self'",
+      "'unsafe-inline'",
+      ...(process.env.NODE_ENV === "production"
+        ? []
+        : ["'unsafe-eval'"]),
+      "https://cal.com",
+      "https://*.cal.com",
+    ].join(" ");
     const csp = [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' https://cal.com https://*.cal.com",
+      `script-src ${scriptSrc}`,
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "font-src 'self' https://fonts.gstatic.com",
       "img-src 'self' data: blob: https:",
