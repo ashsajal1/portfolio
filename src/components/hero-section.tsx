@@ -37,15 +37,14 @@ export default function HeroSection() {
 
                     <h1 className='text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center sm:text-start leading-tight'>
                         <span className='bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent'>
-                            Website Audit &amp; Optimization
+                            Find what&apos;s holding your website back
                         </span>
                     </h1>
 
                     <p className='py-4 text-center sm:text-start text-slate-600 dark:text-slate-400 max-w-md'>
-                        Your website might look great and still have problems under the hood.
-                        I audit across performance, SEO, accessibility, security, mobile
-                        experience, technical quality, and UX — then fix what matters and
-                        verify it worked.
+                        Get a personal review of your site&apos;s speed, search visibility,
+                        accessibility, and user experience. I&apos;ll email you a prioritized
+                        report with practical fixes—and can help implement them, too.
                     </p>
 
                     <div className='flex items-center gap-2 mt-6 flex-wrap justify-center sm:justify-start'>
@@ -56,6 +55,10 @@ export default function HeroSection() {
                             <Button label='See How It Works' icon={<FiCheckCircle aria-hidden="true" />} variant='outline' />
                         </Link>
                     </div>
+
+                    <p className='mt-3 max-w-md text-center text-xs text-slate-500 dark:text-slate-400 sm:text-start'>
+                        Share your website URL and email to get your free report. No spam.
+                    </p>
 
                     <div className='flex flex-wrap items-center gap-x-4 gap-y-1 mt-5 text-xs text-slate-500 dark:text-slate-400'>
                         {trustPoints.map((point) => (
@@ -70,7 +73,7 @@ export default function HeroSection() {
                 <div className='order-1 sm:order-2 flex items-center flex-col justify-center w-full sm:w-1/2'>
                     <div className='relative w-full max-w-[420px] rounded-2xl border border-primary/20 bg-white dark:bg-slate-900 shadow-2xl shadow-primary/20 overflow-hidden animate-float' aria-hidden>
                         <div className='flex items-center justify-between px-5 py-3 border-b border-secondaryLow/40 dark:border-secondaryLow/20'>
-                            <p className='text-sm font-bold text-slate-800 dark:text-slate-100'>Audit Report</p>
+                            <p className='text-sm font-bold text-slate-800 dark:text-slate-100'>Example audit findings</p>
                             <span className='text-xs font-medium text-slate-500 dark:text-slate-400'>yoursite.com</span>
                         </div>
                         <ul className='px-5 py-4 space-y-3'>
