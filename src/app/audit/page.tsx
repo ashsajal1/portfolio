@@ -5,7 +5,10 @@ import { FiCheckCircle } from "react-icons/fi";
 export const metadata: Metadata = {
   title: "Free Website Audit",
   description:
-    "Request a free website audit — get actionable feedback on performance, SEO, and user experience delivered straight to your email.",
+    "Request a free website audit — performance, SEO and UX feedback delivered to your email with clear next steps.",
+  alternates: {
+    canonical: "/audit",
+  },
 };
 
 const benefits = [
@@ -52,7 +55,7 @@ export default function AuditPage() {
           <ul className="mt-6 space-y-4">
             {benefits.map(({ title, text }) => (
               <li key={title} className="flex items-start gap-2.5">
-                <FiCheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                <FiCheckCircle aria-hidden="true" className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                 <span>
                   <span className="block text-sm font-semibold text-slate-900 dark:text-slate-100">
                     {title}

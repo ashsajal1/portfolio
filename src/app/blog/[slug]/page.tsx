@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { FiClock, FiCalendar, FiArrowLeft } from "react-icons/fi";
@@ -5,6 +6,27 @@ import { blogPosts } from "@/lib/blogPosts";
 
 export function generateStaticParams() {
   return blogPosts.map((post) => ({ slug: post.slug }));
+}
+
+export function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Metadata {
+  const post = blogPosts.find((p) => p.slug === params.slug);
+  if (!post) return { title: "Post not found" };
+  return {
+    title: post.title,
+    description: post.excerpt.slice(0, 155),
+    alternates: {
+      canonical: `/blog/${post.slug}`,
+    },
+    openGraph: {
+      type: "article",
+      title: post.title,
+      description: post.excerpt.slice(0, 155),
+    },
+  };
 }
 
 export default function BlogPost({ params }: { params: { slug: string } }) {
@@ -21,17 +43,17 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
           href="/blog"
           className="inline-flex items-center gap-2 text-sm font-semibold text-primary dark:text-secondary transition-all duration-200 hover:gap-3 mb-8"
         >
-          <FiArrowLeft />
+          <FiArrowLeft aria-hidden="true" />
           Back to blog
         </Link>
 
         <div className="flex flex-wrap items-center gap-4 text-xs text-slate-500 dark:text-slate-400 mb-3">
           <span className="inline-flex items-center gap-1.5">
-            <FiCalendar />
+            <FiCalendar aria-hidden="true" />
             {post.date}
           </span>
           <span className="inline-flex items-center gap-1.5">
-            <FiClock />
+            <FiClock aria-hidden="true" />
             {post.readTime}
           </span>
         </div>
@@ -79,9 +101,9 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
         </article>
 
         <div className="mt-12 rounded-2xl bg-gradient-to-br from-primary/10 to-secondary/10 border border-secondaryLow/50 dark:border-secondaryLow/20 p-6 sm:p-8 text-center">
-          <h3 className="text-lg sm:text-xl font-bold gradient-text mb-2">
+          <h2 className="text-lg sm:text-xl font-bold gradient-text mb-2">
             Have a project like this in mind?
-          </h3>
+          </h2>
           <p className="text-sm text-slate-600 dark:text-slate-400 mb-5 max-w-md mx-auto">
             Let&apos;s talk about how the right software decisions can grow your business.
           </p>
