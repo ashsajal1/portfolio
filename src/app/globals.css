@@ -1,58 +1,31 @@
+/* Hallmark · shape: Prism report · genre: modern-minimal · theme: Refract (custom) · job: hire · copy: verbatim · idea: "An audit is a prism: the site goes in, and what holds it back comes out separated." · vibe: "cool light, precise rules, one vermilion signal"
+ * paper: oklch(97.5% 0.006 255) · accent: oklch(56% 0.19 30) · display: Funnel Display · body: Onest · hero: a report specimen held beside the claim, both inside the first screen · nav: sticky slab, wordmark left, destinations and audit right · footer: mast over a colophon row · imagery: one portrait, the report built as a sample · signature: the audit report whose severity column refracts into three bands
+ * axes: light/grotesk-heavy/warm · posture: Restrained · contrast: pass · fold: pass · v2.0.0 */
+/* Hallmark · pre-emit critique: P5 H4 E4 S5 R4 V4 · weakest: E, the report specimen has to be exact; rows sit on one baseline grid and every sample value is labelled */
+/* Hallmark · waive 44c · index page heads sit above their lists; the list is the first content · the head is an index title, not a landing hero */
+/* Hallmark · waive 49b · blog index article titles are full headlines · the titles are the content and wrap by design */
+/* Hallmark · dismissed 77 · index routes are a page head plus one content section · these are not landing pages */
+@import "./tokens.css";
+@import "./base.css";
+@import "./refract.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    /* Light mode uses darkened shades so text/icons in these colors
-       meet WCAG 2 AA (4.5:1) on white. Dark mode keeps the bright
-       neon palette (light-on-dark passes). */
-    --color-primary-low: 216 251 229;
-    --color-primary: 21 128 61;
-    --color-secondary: 15 118 110;
-    --color-secondary-low: 215 250 245;
-    --color-secondary-high: 15 118 110;
-  }
-
-  :root.dark {
-    --color-primary-low: 216 251 229;
-    --color-primary: 58 237 125;
-    --color-secondary: 56 232 207;
-    --color-secondary-low: 215 250 245;
-    --color-secondary-high: 34 139 124;
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
-
-  body {
-    @apply min-h-screen antialiased;
-  }
-
-  ::selection {
-    @apply bg-primary text-slate-50 dark:text-slate-900;
-  }
-
-  ::-webkit-scrollbar {
-    @apply w-2;
-  }
-
-  ::-webkit-scrollbar-track {
-    @apply bg-transparent;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    @apply rounded-full bg-gradient-to-b from-primary to-secondary;
-  }
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-@layer components {
-  .gradient-text {
-    @apply bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent;
-  }
+::-webkit-scrollbar-track {
+  background: var(--color-paper);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-rule);
+  border-radius: var(--radius-pill);
 }
 
 .bprogress .bar {
-  background: linear-gradient(to right, rgb(var(--color-primary)), rgb(var(--color-secondary))) !important;
+  background: var(--color-accent) !important;
 }
