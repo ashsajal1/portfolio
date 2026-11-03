@@ -2,7 +2,6 @@ import Link from 'next/link';
 import React from 'react';
 import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import { RiTwitterXLine } from "react-icons/ri";
-import { FiMail, FiPhone, FiHome, FiSearch } from "react-icons/fi";
 import BackToTop from './back-to-top';
 
 const socialLinks = [
@@ -13,97 +12,71 @@ const socialLinks = [
 ];
 
 const quickLinks = [
-  { href: "/", label: "Home", icon: <FiHome aria-hidden="true" /> },
-  { href: "/audit", label: "Free Audit", icon: <FiSearch aria-hidden="true" /> },
+  { href: "/", label: "Home" },
+  { href: "/audit", label: "Free audit" },
+  { href: "/projects", label: "Projects" },
+  { href: "/blog", label: "Blog" },
 ];
 
 export default function Footer() {
     const year = new Date().getFullYear();
 
     return (
-        <footer className="relative bg-gradient-to-br from-primaryLow/40 via-transparent to-secondaryLow/40 dark:from-primary/10 dark:via-transparent dark:to-secondary/10 pt-12 pb-6 px-4 sm:px-12 text-slate-600 dark:text-slate-400">
-            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-secondary to-transparent opacity-50" />
+        <footer className="site-footer">
+            <div className="shell">
+                <div className="footer-mast">
+                    <div>
+                        <Link href="/" className="footer-wordmark" aria-label="Sajal, home">
+                            Sajal
+                        </Link>
+                        <p className="footer-tag">
+                            Website audit and optimization. Find the issues, fix them, and
+                            verify the result.
+                        </p>
+                    </div>
 
-            <div className="container w-full mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-                <div>
-                    <h2 className="text-2xl font-bold mb-3 gradient-text">Sajal</h2>
-                    <p className="text-sm leading-relaxed">
-                        Website audit &amp; optimization — find the issues holding your
-                        site back, get them fixed, and verify the results.
-                    </p>
-                    <div className="flex items-center space-x-3 mt-5">
-                        {socialLinks.map(({ href, label, icon }) => (
-                            <Link
-                                key={href}
-                                href={href}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label={label}
-                                title={label}
-                                className="flex items-center justify-center h-9 w-9 rounded-full bg-white/70 dark:bg-slate-800/70 border border-secondaryLow/40 dark:border-secondaryLow/20 text-primary dark:text-secondary shadow-sm transition-all duration-200 hover:text-white hover:bg-gradient-to-br hover:from-primary hover:to-secondary hover:border-transparent hover:-translate-y-1"
-                            >
-                                {icon}
-                            </Link>
-                        ))}
+                    <div className="footer-contact">
+                        <a href="mailto:ashsajal@yahoo.com">ashsajal@yahoo.com</a>
+                        <a href="tel:+8801608478333">+8801608478333</a>
                     </div>
                 </div>
 
-                <div>
-                    <h2 className="text-lg font-bold mb-4 gradient-text">Quick Links</h2>
-                    <ul className="space-y-2.5 text-sm">
-                        {quickLinks.map(({ href, label, icon }) => (
-                            <li key={href}>
-                                <Link
-                                    href={href}
-                                    className="inline-flex items-center gap-2 transition-all duration-200 hover:text-primary dark:hover:text-secondary hover:translate-x-1"
-                                >
-                                    <span className="text-secondary dark:text-secondaryLow">{icon}</span>
-                                    {label}
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
+                <div className="footer-links">
+                    <div>
+                        <p className="footer-col-title">Pages</p>
+                        <ul className="footer-list">
+                            {quickLinks.map(({ href, label }) => (
+                                <li key={href}>
+                                    <Link href={href}>{label}</Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    <div>
+                        <p className="footer-col-title">Elsewhere</p>
+                        <ul className="footer-list footer-social">
+                            {socialLinks.map(({ href, label, icon }) => (
+                                <li key={href}>
+                                    <Link
+                                        href={href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label={label}
+                                    >
+                                        {icon}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                 </div>
 
-                <div>
-                    <h2 className="text-lg font-bold mb-4 gradient-text">Get in Touch</h2>
-                    <ul className="space-y-3 text-sm">
-                        <li>
-                            <a
-                                href="mailto:ashsajal@yahoo.com"
-                                className="inline-flex items-start gap-2.5 transition-all duration-200 hover:text-primary dark:hover:text-secondary"
-                            >
-                                <span className="mt-0.5 text-secondary dark:text-secondaryLow"><FiMail aria-hidden="true" /></span>
-                                <span>
-                                    <span className="block text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400">Email</span>
-                                    ashsajal@yahoo.com
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="tel:+8801608478333"
-                                className="inline-flex items-start gap-2.5 transition-all duration-200 hover:text-primary dark:hover:text-secondary"
-                            >
-                                <span className="mt-0.5 text-secondary dark:text-secondaryLow"><FiPhone aria-hidden="true" /></span>
-                                <span>
-                                    <span className="block text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400">Phone</span>
-                                    +8801608478333
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
+                <div className="footer-bottom">
+                    <p>&copy; {year} ashsajal.</p>
+                    <p>Built with Next.js.</p>
+                    <BackToTop />
                 </div>
-            </div>
-
-            <div className="container w-full mx-auto mt-10 pt-5 border-t border-secondaryLow/40 dark:border-secondaryLow/20 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm">
-                <p>
-                    &copy; {year} ashsajal. All rights reserved.
-                </p>
-                <p className="inline-flex items-center gap-1">
-                    Built with <span className="text-secondary dark:text-secondaryLow">&#10084;</span> using Next.js
-                </p>
-                <BackToTop />
             </div>
         </footer>
     );
