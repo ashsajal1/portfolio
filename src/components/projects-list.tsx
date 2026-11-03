@@ -23,17 +23,16 @@ export default function ProjectsList({ projects }: { projects: ProjectType[] }) 
   );
 
   return (
-    <div className="max-w-6xl mx-auto">
+    <section className="project-index" aria-label="Projects">
+      <h2 className="index-title">All projects</h2>
+
       {allTags.length > 0 && (
-        <div className="flex flex-wrap justify-center gap-2 mb-10">
+        <div className="filter-row" role="group" aria-label="Filter projects by technology">
           <button
             type="button"
             onClick={() => setActiveTag(null)}
-            className={`px-4 py-1.5 rounded-full text-sm font-medium border transition-all duration-200 ${
-              activeTag === null
-                ? "bg-gradient-to-br from-primary to-secondary text-slate-50 border-transparent"
-                : "border-secondaryLow/50 dark:border-secondaryLow/20 text-slate-600 dark:text-slate-300 hover:border-primary/40"
-            }`}
+            aria-pressed={activeTag === null}
+            className="filter-btn"
           >
             All
           </button>
@@ -42,11 +41,8 @@ export default function ProjectsList({ projects }: { projects: ProjectType[] }) 
               key={tag}
               type="button"
               onClick={() => setActiveTag(tag)}
-              className={`px-4 py-1.5 rounded-full text-sm font-medium border transition-all duration-200 ${
-                activeTag === tag
-                  ? "bg-gradient-to-br from-primary to-secondary text-slate-50 border-transparent"
-                  : "border-secondaryLow/50 dark:border-secondaryLow/20 text-slate-600 dark:text-slate-300 hover:border-primary/40"
-              }`}
+              aria-pressed={activeTag === tag}
+              className="filter-btn"
             >
               {tag}
             </button>
@@ -54,8 +50,8 @@ export default function ProjectsList({ projects }: { projects: ProjectType[] }) 
         </div>
       )}
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {filtered.map(({ title, description, repo, url, image }) => (
+      <div className="project-list">
+        {filtered.map(({ title, description, repo, url, image, tags }) => (
           <Project
             key={repo}
             title={title}
@@ -63,9 +59,10 @@ export default function ProjectsList({ projects }: { projects: ProjectType[] }) 
             repo={repo}
             url={url}
             image={image}
+            tags={tags}
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 }

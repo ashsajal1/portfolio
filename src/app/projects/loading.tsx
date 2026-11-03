@@ -2,25 +2,39 @@ import React from "react";
 
 export default function Loading() {
   return (
-    <div className="min-h-screen py-12 px-4 sm:px-8">
-      <div className="text-center mb-12">
-        <div className="h-8 w-72 mx-auto rounded bg-slate-200 dark:bg-slate-700 animate-pulse" />
-        <div className="h-4 w-80 mx-auto mt-3 rounded bg-slate-200 dark:bg-slate-700 animate-pulse" />
-        <div className="h-1 w-24 mx-auto mt-4 rounded-full bg-slate-200 dark:bg-slate-700 animate-pulse" />
+    <div className="shell page-wrap">
+      <div className="page-head">
+        <div className="page-head-grid">
+          <div className="skeleton skeleton-title" />
+          <div className="skeleton-stack page-lede">
+            <div className="skeleton skeleton-line" style={{ width: "100%" }} />
+            <div className="skeleton skeleton-line" style={{ width: "80%" }} />
+          </div>
+        </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
-        {Array.from({ length: 6 }).map((_, i) => (
-          <div
-            key={i}
-            className="rounded-2xl border border-secondaryLow/50 dark:border-secondaryLow/20 bg-white/50 dark:bg-slate-900/50 p-4 shadow-sm"
-          >
-            <div className="h-[280px] w-full rounded-xl bg-slate-200 dark:bg-slate-700 animate-pulse" />
-            <div className="h-6 w-2/3 mt-4 rounded bg-slate-200 dark:bg-slate-700 animate-pulse" />
-            <div className="h-4 w-full mt-2 rounded bg-slate-200 dark:bg-slate-700 animate-pulse" />
-            <div className="h-10 w-full mt-4 rounded-lg bg-slate-200 dark:bg-slate-700 animate-pulse" />
-          </div>
-        ))}
+      <div className="project-index">
+        <div className="filter-row">
+          {Array.from({ length: 5 }).map((_, i) => (
+            <div key={i} className="skeleton skeleton-chip" />
+          ))}
+        </div>
+
+        <div className="project-list">
+          {Array.from({ length: 4 }).map((_, i) => (
+            <div key={i} className="project">
+              <div className="skeleton skeleton-media" />
+              <div
+                className="skeleton-stack"
+                style={{ marginTop: "var(--space-md)" }}
+              >
+                <div className="skeleton skeleton-line" style={{ width: "40%" }} />
+                <div className="skeleton skeleton-line" style={{ width: "90%" }} />
+                <div className="skeleton skeleton-line" style={{ width: "70%" }} />
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
