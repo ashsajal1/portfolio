@@ -10,7 +10,7 @@ const SwitchButton = () => {
   useEffect(() => setMounted(true), []);
 
   if (!mounted) {
-    return <div className="h-9 w-9" aria-hidden />;
+    return <div className="theme-toggle" aria-hidden />;
   }
 
   const isDark = resolvedTheme === 'dark';
@@ -20,7 +20,7 @@ const SwitchButton = () => {
       type="button"
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
       onClick={() => setTheme(isDark ? 'light' : 'dark')}
-      className="flex items-center justify-center h-9 w-9 rounded-lg text-slate-500 dark:text-slate-300 transition-all duration-200 hover:text-primary dark:hover:text-secondary hover:bg-primary/10 dark:hover:bg-secondary/20 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary"
+      className="theme-toggle"
     >
       {isDark ? <FiSun aria-hidden="true" className="h-5 w-5" /> : <FiMoon aria-hidden="true" className="h-5 w-5" />}
     </button>

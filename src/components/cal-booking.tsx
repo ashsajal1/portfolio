@@ -61,28 +61,21 @@ export default function CalBooking() {
   };
 
   return (
-    <section className="py-12 px-4 sm:px-12">
-      <div className="container w-full mx-auto" ref={containerRef}>
-        <div className="text-center mb-10">
-          <h2 className="text-2xl sm:text-4xl font-extrabold gradient-text">
-            Book a Free Consultation
-          </h2>
-          <p className="text-slate-600 dark:text-slate-400 mt-3 max-w-xl mx-auto text-sm sm:text-base">
-            Pick a time that works for you. We&apos;ll talk through your website, your audit results, and the fastest path to fixing what matters most.
+    <section className="section section--rule">
+      <div className="shell booking-grid" ref={containerRef}>
+        <div>
+          <h2 className="booking-title">Book a call</h2>
+          <p className="booking-lede">
+            Pick a time. We&apos;ll talk through your site.
           </p>
-          <button
-            type="button"
-            onClick={openCal}
-            className="mt-5 inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-md text-sm font-medium bg-gradient-to-br from-primary to-secondary text-slate-50 dark:text-slate-900 hover:to-secondaryHigh transition-all duration-200 hover:scale-105 active:scale-95 cursor-pointer"
-          >
-            Open booking calendar
-          </button>
+          <div className="booking-actions">
+            <button type="button" onClick={openCal} className="btn btn--primary">
+              Open booking calendar
+            </button>
+          </div>
         </div>
 
-        <div
-          id="my-cal-inline"
-          className="mx-auto w-full max-w-full rounded-2xl border border-secondaryLow/50 dark:border-secondaryLow/20 overflow-hidden bg-white/50 dark:bg-slate-900/50 shadow-sm min-h-[720px] h-[720px]"
-        />
+        <div id="my-cal-inline" className="cal-frame" />
       </div>
     </section>
   );

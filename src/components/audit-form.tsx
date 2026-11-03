@@ -4,12 +4,6 @@ import { useState } from 'react';
 
 type Status = 'idle' | 'submitting' | 'success' | 'error';
 
-const inputClassName =
-  'w-full rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2 text-sm text-slate-900 dark:text-slate-100 placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30 disabled:opacity-60';
-
-const labelClassName =
-  'mb-1 block text-sm font-medium text-slate-700 dark:text-slate-300';
-
 export default function AuditForm() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -74,18 +68,16 @@ export default function AuditForm() {
 
   if (status === 'success') {
     return (
-      <div role="status" className="py-4 text-center">
-        <h2 className="text-xl font-bold text-slate-900 dark:text-slate-50">
-          Request received!
-        </h2>
-        <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">
-          Thanks! I&apos;ll review your site and send the audit report to your
-          email shortly.
+      <div role="status" className="form-success">
+        <h2 className="form-success-title">Request received</h2>
+        <p>
+          Thanks. I&apos;ll review your site and send the audit report to your email
+          shortly.
         </p>
         <button
           type="button"
           onClick={() => setStatus('idle')}
-          className="mt-4 text-sm font-medium text-primary underline underline-offset-4"
+          className="text-link"
         >
           Submit another request
         </button>
@@ -94,9 +86,9 @@ export default function AuditForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
-      <div>
-        <label htmlFor="audit-name" className={labelClassName}>
+    <form onSubmit={handleSubmit}>
+      <div className="field">
+        <label htmlFor="audit-name" className="field-label">
           Name
         </label>
         <input
@@ -109,12 +101,12 @@ export default function AuditForm() {
           value={name}
           onChange={(e) => setName(e.target.value)}
           disabled={isSubmitting}
-          className={inputClassName}
+          className="field-input"
         />
       </div>
 
-      <div>
-        <label htmlFor="audit-email" className={labelClassName}>
+      <div className="field">
+        <label htmlFor="audit-email" className="field-label">
           Email
         </label>
         <input
@@ -127,12 +119,12 @@ export default function AuditForm() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           disabled={isSubmitting}
-          className={inputClassName}
+          className="field-input"
         />
       </div>
 
-      <div>
-        <label htmlFor="audit-website" className={labelClassName}>
+      <div className="field">
+        <label htmlFor="audit-website" className="field-label">
           Website
         </label>
         <input
@@ -146,13 +138,11 @@ export default function AuditForm() {
           value={website}
           onChange={(e) => setWebsite(e.target.value)}
           disabled={isSubmitting}
-          className={inputClassName}
+          className="field-input"
         />
       </div>
 
-      <p className="text-xs text-slate-500 dark:text-slate-400">
-        Your email will be used to send you the audit report. No spam.
-      </p>
+      <p className="form-note">Only used to send the report. No spam.</p>
 
       {/* Honeypot for Web3Forms spam protection */}
       <input
@@ -160,13 +150,13 @@ export default function AuditForm() {
         name="botcheck"
         tabIndex={-1}
         autoComplete="off"
-        className="hidden"
+        className="visually-hidden"
         aria-hidden="true"
         aria-label="Leave this field unchecked"
       />
 
       {status === 'error' && (
-        <p role="alert" className="text-xs text-red-600 dark:text-red-400">
+        <p role="alert" className="form-error">
           {errorMessage}
         </p>
       )}
@@ -174,9 +164,9 @@ export default function AuditForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full rounded-lg bg-gradient-to-br from-primary to-secondary p-2.5 text-sm font-semibold text-slate-50 dark:text-slate-900 hover:to-secondaryHigh focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 disabled:opacity-60"
+        className="btn btn--primary btn--block"
       >
-        {isSubmitting ? 'Sending…' : 'Get My Free Audit'}
+        {isSubmitting ? 'Sending…' : 'Get my free audit'}
       </button>
     </form>
   );
