@@ -5,7 +5,6 @@ import DeliverablesSection from "@/components/deliverables-section";
 import ExpertiseSection from "@/components/expertise-section";
 import TestimonialsSection from "@/components/testimonials-section";
 import CalBooking from "@/components/cal-booking";
-import CTASection from "@/components/cta-section";
 
 export default function Home() {
   return (
@@ -17,7 +16,6 @@ export default function Home() {
       <ExpertiseSection />
       <TestimonialsSection />
       <CalBooking />
-      <CTASection />
     </main>
   );
 }
