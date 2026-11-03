@@ -5,7 +5,7 @@ export const projects = [
     image: "/typing-app.png",
     url: "https://typing-practice-pro.netlify.app/",
     description:
-      "The Typing Practice App is a web application built with React.js that allows users to practice and improve their typing skills with a simple and intuitive interface.",
+      "A React app for practising typing with a simple interface.",
     tags: ["React", "JavaScript", "Tailwind CSS"],
   },
   {
@@ -14,7 +14,7 @@ export const projects = [
     image: "/mini-course.png",
     url: "https://minicourse.netlify.app/",
     description:
-      "Empowering learners with quality education and practical skills for the modern world. Built with Next.js and PostgreSQL.",
+      "A learning platform built with Next.js and PostgreSQL.",
     tags: ["Next.js", "TypeScript", "PostgreSQL"],
   },
   {
@@ -23,7 +23,7 @@ export const projects = [
     image: "/sohojboi.png",
     url: "https://sohojboi.netlify.app/",
     description:
-      "An interactive platform to ask and answer questions, participate in quizzes, and access educational content through a blog.",
+      "A question-and-answer platform for educational content.",
     tags: ["Next.js", "React", "MongoDB"],
   },
   {
@@ -32,7 +32,7 @@ export const projects = [
     image: "/js-practice-app.png",
     url: "https://js-practices-app.netlify.app/",
     description:
-      "An app to practice programming related topics and concepts — JavaScript, Rust, Golang, React and more.",
+      "A practice app for JavaScript, Rust, Go and React.",
     tags: ["React", "JavaScript", "TypeScript"],
   },
   {
@@ -41,7 +41,7 @@ export const projects = [
     image: "/next-saas-template.png",
     url: "https://next-saas.netlify.app/",
     description:
-      "A comprehensive starter kit for building scalable SaaS applications with Next.js, featuring built-in authentication, database integration, and responsive design.",
+      "A Next.js starter for SaaS apps with auth and a database.",
     tags: ["Next.js", "SaaS", "TypeScript", "Tailwind CSS"],
   },
   {
@@ -50,7 +50,7 @@ export const projects = [
     image: "/calorie-tracker.png",
     url: "https://calorie-trackers-pro.netlify.app/",
     description:
-      "A sleek and responsive calorie tracker app built with Vue.js 3, TypeScript, and Tailwind CSS. Log meals, track daily intake, and monitor fitness goals in real time.",
+      "A Vue calorie tracker for meals and daily intake.",
     tags: ["Vue.js", "TypeScript", "Tailwind CSS"],
   },
 ];

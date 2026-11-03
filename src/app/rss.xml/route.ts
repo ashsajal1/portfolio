@@ -29,7 +29,7 @@ export function GET() {
   const xml = `<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
   <channel>
-    <title>Ashfiquzzaman Sajal — Blog</title>
+    <title>Ashfiquzzaman Sajal: Blog</title>
     <link>${BASE_URL}/blog</link>
     <description>Insights on profitability, automation, and software that grows your business.</description>
     <language>en-us</language>

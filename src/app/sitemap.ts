@@ -6,7 +6,7 @@ const BASE_URL = "https://ashsajal.netlify.app";
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 
-  const staticRoutes = ["", "/projects", "/blog"].map((path) => ({
+  const staticRoutes = ["", "/audit", "/projects", "/blog"].map((path) => ({
     url: `${BASE_URL}${path}`,
     lastModified: now,
     changeFrequency: "weekly" as const,
