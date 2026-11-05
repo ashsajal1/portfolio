@@ -39,3 +39,7 @@ next-env.d.ts
 .commandcode/
 .hallmark/
 src/app/not-found-preview/
+
+# cloudflare
+.open-next/
+.wrangler/
